@@ -1,0 +1,60 @@
+Good Morning !!!!!
+
+We understand how to record the script for signup or register 
+
+by using basic selectors - tagname/classname/id/attribute 
+cy.get('tagname')
+cy.get('.classname')
+cy.get('#id')
+cy.get('[attributeName="value"]')
+
+developer options / right click inspect the right element to traceout the respective selector 
+======================================================
+cy.contains('text')
+cy.contains('Register')
+cy.contains('Log in')
+cy.contains('Wishlist')
+======================================================
+selectors HUB => as browser plugin - add to browser  
+right click >> selectors hub >> copy relative CSS selector 
+cy.get('paste the copied CSS selector here ')
+cy.get('.ico-register')
+cy.get('.ico-login')
+cy.get('.wishlist-label')
+cy.get('.cart-label')
+cy.get('.count')
+======================================================
+cypress play ground - 
+
+create a cy.visit('URL ') then copy the suitable cypress command with the help of cypress playground .
+there is spy icon to traceout the UI element with in the website
+========================================================
+cypress studio - record and playback 
+
+cypress.config.js => 
+e2e {
+experimentalStudio:true, 
+
+}
+torch icon beside the Test suite(describe() )  , test case (it()) 
+
+describe() ==> to add a new test 
+it() => to add a command 
+
+here if you interact with website cy.get() commands will be generated 
+if you want to add an assertion then you use right click >> add your assertion 
+========================================================
+selectorsHUb or inspect =>
+========================================================
+Today onwords we need to work common repository - you can directly access what I am doing in my project 
+
+GitHub => 
+a. create an account 
+b. create a repository 
+c. in that repo - add a gitignore file with node js 
+d. copy the repo URL 
+e. download install GitHub desktop 
+f. login with above created account 
+g.  
+
+
