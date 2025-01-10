@@ -1,0 +1,176 @@
+Good morning!!!!!
+
+We are about to start cypress journey .
+
+to do so :
+
+we need to understand software testing concepts as a pre requsite.
+We need to learn Javascript 
+Cypress 
+frame works 
+
+=> 1 week =>  we need to work on cypress basic methods and intro 
+a. install and setup cypress in your local computer 
+b. Folder structure in the cypress 
+c. record and play back in the cypress 
+d. basic selectors in the cypress 
+e. Important methods in the cypress => basic UI elements 
+1. Action commands 
+2. Querying commands 
+3. Traversal commands 
+4. Assertions 
+5. navigational commands 
+=>2 week => We need to work on Javascript  => 
+a. variable declaration => var , let and const 
+b. Operators  => 
+c. Datatypes  => 
+1. premitive data types  => holding a single value 
+let x= 10;
+let name= "ram"
+
+2. non premitive data types  => holding bunch of value  
+arrays
+let numbers =[1,2,3,4,5,6] 
+objects 
+let Cars={name:"ford",
+model:"Eco sport",
+year:"2020",
+age:10
+}
+functions 
+function functionName() {}
+date 
+const currentDate=new Date(); 
+
+regular expressions 
+value=/\d
+=/^ram
+etc...
+d. Conditonal statement  => if else /else if  and switch 
+e.loops  => for , while loop and do while 
+for(let x; x<=10;i++){}
+for(let x in Cars)
+for(let x of numbers)
+f. Functiona() , object and classes 
+g. export the class and import class
+h. promises in JS and closures 
+
+10 to 15 hours of time . 
+3 weeks we need to finish JS + basic skelton of cypress 
+week #4  => understand framework #1 
+cutom keyword 
+we read the data from external sources like Json / csv format 
+Connect with cypress cloud  => record your results in the cloud 
+=> cypress.config.js  => retries / viewports / 
+
+global setitng 
+test suite level settings 
+test case level settings 
+screenshots /videos /download files => default folders and usage 
+
+week #5 we need to work with ecommerce project  => 
+POM => page object model as a design pattern 
+Cucumber  => BDD frame work  => 
+Given  when Then => 
+manual test case to BDD test definiton 
+for the same we can use above along with custom keywords
+week#6 : final week : 
+we need to under api tesitng / Rest apis => GraphQL => (exttra lecturers in the weekend classes )
+db validations  => MS SQL => (my sql and PostgreSQL )
+CI integration => Github actions / Jenkins / microsoft teams / circle CI 
+
+============================================================
+every month  we do have 1/2 lectures on the weekend on latest topics or other CI tools integration any recent changes in cypress .
+
+a. GrpahQL api testing 
+b. Postgres DB validaitons 
+c. Jenkins / any other CI integration 
+d. JIRa integration 
+============================================================
+ 6 weeks course 
+2 weeks we can start internship on Cypress  => 6 weeks  => you have to be working along with developer + sm + BA  => develop an application 
+
+you are a automation tester . 
+==============================================================
+=> 
+
+
+1. Setup the cypress in your computer 
+2. basic structure of cypress test 
+3. folder structure 
+4. introduction cypress  advanced features
+==============================================================
+1. how to setup cypress in your local computer as first job.
+
+a. we need to download and install cypress application from the cypress website. 
+1. nodejs 
+2. VSCode 
+
+we can download cypress application from cypress website 
+
+try to setup cypres with directdownload .
+
+a. download the zip file from cypress website 
+b. Extract the files into a folder 
+c. 
+
+
+1. Cypress is usedful to run your scripts in CLI (command line interface) 
+npx cypress run
+2. cypress is useful to run the your scripts in GUI (graphial User interface) 
+npx cypress open 
+
+these commands used to play with cypress 
+
+important features in cypress : 
+
+
+outcome: 
+1. we understand 6 weeks course strcture and 6 weeks internship program 
+2. We understand how to download cypress direct download zip file from cypress website 
+3. extracted the downloaded file 
+4. run the cypress application shortcut with in the cypress folder 
+5. UI of cypress displayed => Cypress launch pad 
+a. select project folder 
+b. select E2E testing from testing types 
+c. automatically cypress created folder structure 
+cypress >> 
+1. cypress.config.js file 
+2. Support  => 
+a. e2e.js 
+b. commands.js 
+3. fixtures  >> example.json 
+
+d.Select a browser  => all installed browser will be displayed 
+  default browser is electorn browser => you do not want to install electron browser => it is taken care by cypress 
+e. Test runner will be displayed 
+1. create a spec file with extension .cy.js 
+in this spec file we need to understand 2 things 
+descirbe () => test suite 
+
+it() => test case 
+
+specfile in the cypress => 
+describe("name", ()=> {
+
+it("Name of the test",()=> {})
+it("Name of the test",()=> {})
+it("Name of the test",()=> {})
+it("Name of the test",()=> {})
+it("Name of the test",()=> {})
+it("Name of the test",()=> {})
+
+
+})
+
+
+click on the spec file to run the spec 
+=>  visual debugging 
+=> time travel 
+
+
+
+
+
+
+

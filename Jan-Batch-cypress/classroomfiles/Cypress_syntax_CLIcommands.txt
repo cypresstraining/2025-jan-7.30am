@@ -1,0 +1,58 @@
+Good Morning !!!!!
+
+1.How to use cypress play ground to locate the element 
+
+in the test runner there is  spy icon to enable the play ground 
+and on the particular element we need to click on it . to get the right cypress command to locate it .
+Locate the element with the cypress play ground
+perform an action 
+add an assertion => should()
+ 
+2. enable the cypress studio => record and play back 
+
+
+experimentalStudio: true in cypress.config.js file 
+
+it enabled a torch icon just beside the test suite and test case. 
+Testsuite(describe)  => create a new test
+Test case (it)=>add a new step 
+
+if you click on AUT then location of the element, action both will be recorded 
+if you right click and select respective assertion 
+exist or not 
+enable or not 
+have.text - Expected text
+contain -  expected text 
+have.class - expected classname 
+etc...
+======================================================
+
+Test isolation => every test will start from scratch .
+no previous test results carry forward to the current test.
+every test is independent by default 
+
+
+Tests should always be able to be run independently from one another and still pass.
+
+by default cypress test isolation is true , hence every test will start independently 
+
+if you change this to false - in cypress.config.js file then 
+    testIsolation:false,
+
+your previous test results are carry forwarded to your current test 
+// we revisit this concept after basics of cypress is done 
+=> cy.session()
+cy.clock()
+etc...
+===============================================
+only specific test case we executed through it.only()
+
+how to exclude the it block from the test run 
+xit()
+=================================================
+
+how to run cypress in CLI 
+
+npx cypress open  => this is opening the cypress test runner in the GUI mode 
+
+or npx cypress run 

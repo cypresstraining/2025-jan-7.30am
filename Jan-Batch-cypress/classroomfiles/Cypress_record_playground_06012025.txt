@@ -1,0 +1,109 @@
+Good Morning !!!!!
+Recap: 
+
+How to install or setup cypress in your local computer.
+a. nodejs 
+b. Vscode 
+c. npm install cypress --save-dev => 
+
+node_modules  => in your project => all dependencies to run cypress 
+
+package.json  => all installed packages related information 
+
+npm install 
+
+d. npx cypress open
+we launch the cypress very first time  =>  we need to configure automatically  required files 
+
+=> cypress
+    => fixtures => example.json => define the test data. 
+
+    => support  => e2e.js => all import statements 
+                => commands.js => custom commands 
+
+config.cypress.js  => this file is a driver script to run your cypress. all global settings or configuration available in this file.
+
+if this file is not configured correctly that mean you  no where open the cypress test runner in UI or CLI mode.
+
+=> E2E as your testing type
+=> you can select the browser  => if you install the firefox browser in your computer then only you can run your tests on firefox browser.
+
+Your test runner will be opened - 
+a. scaffold examples 
+b. new spec  => new spec  =>  template spec 
+
+describe("template",()=>{
+it("pass",()=>{
+
+cy.visit('https://example.cypress.io')
+
+})
+
+})
+
+cypress  => e2e => spec.cy.js 
+
+.cy.js => cypress spec with in JS 
+.cy.ts => cypress spec with in type script  
+
+step#1 => we need to select the element through cypress 
+by using script or code I can trace out the target UI component . 
+cy.get()
+cy.contains()
+cy.within()
+cy.root() // Querying command => make a query to the website 
+
+step#2 => on the selected UI component what kind of we can able to perform  => 
+textbox  => type('yourtext')
+radio button => .check()
+checkboxes  => .check() => .uncheck() 
+button => click() 
+link => click()
+toggle switch => click() 
+dropdown=> .select('India')
+        => .select('Apple')
+rightclk()
+dblclick()
+scrollTo()
+scrollIntoView()
+
+3. Test the outcome  => 
+supply the expected result to the cypress test with the help of should()
+
+.should('exist') // is it available or not 
+.should('be.visible')// is it visible 
+.should('have.text','expected text')// exact matching text should be available in the application 
+
+cypress playground 
+
+locate the element 
+
+cypress studio => a record and playback action 
+you can locate 
+you can perform an action 
+you add an assertion automatically by using defined UI options 
+
+open cypress configuration file  => cypress.config.js 
+
+    experimentalStudio:true,// this statement enabled you to record your basic action and assertions 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

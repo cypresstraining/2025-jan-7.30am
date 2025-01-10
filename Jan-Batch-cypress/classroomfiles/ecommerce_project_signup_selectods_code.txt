@@ -1,0 +1,24 @@
+Gm guys !!!!!
+Recap: 
+We understand how HTML code will looks like 
+how to traceout the element by using CSS selectors 
+
+a. tag name selector  => cy.get('tagname')
+b. classname selector=> cy.get('.classname')
+c. id selector  => cy.get('#id')
+d. attribute selector  => cy.get('[attributeName="Value"]')
+
+let me create an automation code by using above selectors - 
+
+To locate this element's selector we can use Developer tools . 
+
+a. Inspect  any element exist on the page
+b. f12 
+<div class="result">Your registration completed</div>
+
+
+c. settings  >> Developer option 
+
+
+
+
