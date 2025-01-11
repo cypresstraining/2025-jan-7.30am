@@ -1,0 +1,61 @@
+Recap: 
+we understand how to use cypress play groung
+cypress studio to record and playback the actions and add assertions 
+it.only to  run only selected test cases
+it.skip() or xit() to skip the particular test case from the execution 
+npx cypress open to launch the cypress UI and test runner 
+npx cypress run is used to run your cypress tests in CLI 
+CLI => command line interface 
+GUI => graphical user interface 
+=======================================================
+Pass test cases executed very quickly than failed test cases. why because failed test cases wait for 4000 ms before it commit the failure . 
+======================================================
+test isolation => by default cypress will run every test independently .
+than mean previous test result should not carry forward to the current test or next test. 
+
+every test will start from scratch. 
+
+there is a global setting testIsolation:false,
+=====================================================
+By looking at recorded script can we realise like 
+to do automation basic HTML, CSS and JavaScript are required? 
+cy.get('h1')
+cy.get('.dropdown-toggle')
+cy.get('#hash')
+
+HTML and CSS basic information to deal with this automation 
+These are called as CSS selectors 
+
+We do have CSS code with in the HTML code  => 
+HTML tags as well
+
+JS  => javascript is a programming language -  cypress built on JS 
+to do some scripting or customization of your automation we need JS knowledge or coding knowledge. 
+=> CSS selectors  => 
+to write your own code or command to select the particular UI element . 
+==============================================
+1. Select the element in the web page // locate the element - to do so we need to learn CSS selectors 
+=> CSS => cascading style sheet 
+selector  => HTML code  => to locate the element with in your HTML your developer used to select the element by using CSS selector the same way we also do select the element in cypress by using css selector 
+
+2. Perform an action on the selected element 
+3. Add expected result to the element 
+===============================================
+three possibilities to select the element primarily in the HTML code. 
+
+in any browser Ctrl+U  to see the page source 
+
+Document Object Model  => DOM 
+HTML code 
+<Tag> your statements 
+</Tag>
+if you want to locate or select any element with this tag name then cypress provide a facility to select that element  by using cy.get() 
+cy.get('tagname') // it will fetch all matches ( tags) 
+cy.get('.classname')
+cy.get('#id')
+cy.get('[href="https://www.cypress.io" ]') 
+
+
+
+
+

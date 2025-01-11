@@ -62,11 +62,36 @@ it('To Test the  Login  with studio commands',()=>{
     cy.get('.ico-register').should('be.visible');
     cy.get('.ico-register').should('have.text', 'Register');
 })
-  it.only('by using playground',()=>{
+  it('by using playground',()=>{
     cy.get('.ico-login').click()
     cy.get('#Email').clear().type('admin@yourstore.com')
     cy.get('#Password').clear().type('adminadmin')
     cy.get('form > .buttons > .button-1').click()
 
   })  
+
+  it.only("Login test with inspect element ",()=>{
+  cy.contains('Log in').click()
+  cy.get('#Email').type('admin@yourstore.com')
+  cy.get('#Password').type('adminadmin')
+  cy.get('#RememberMe').check()
+  cy.get('.button-1.login-button').click()
+  cy.contains('Log out').click()
+  cy.url().should('eq','http://ramanasoft123-001-site1.anytempurl.com/')
+  //cy.get('.email')
+
+  })
+  it.only('through selectors hub',()=>{
+   cy.get('.ico-login').click()
+   cy.get('#Email').type('admin@yourstore.com')
+   cy.get('#Password').type('adminadmin')
+   cy.get('#RememberMe').check()
+   cy.get('button[class="button-1 login-button"]').click()
+   cy.get('.ico-account').should('be.visible')
+   cy.get('.ico-logout').click()
+   cy.url().should('eq','http://ramanasoft123-001-site1.anytempurl.com/')
+
+
+
+  })
 })

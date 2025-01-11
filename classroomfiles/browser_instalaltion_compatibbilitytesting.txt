@@ -1,0 +1,48 @@
+Good Morning !!!!! -
+GitHub account creation  - 
+Access to the repository - 
+Download the GitHub desktop 
+clone the repository 
+checkout latest code 
+
+1. we know how to record the scripts by using studio commands 
+2. we know how to write scripts by cypress play ground 
+3. we know how to write scripts with inspect elements in the developer options 
+4. we know how to write scripts with browser plugins -  selectors hub 
+
+5. browser compatibility testing - we are covering 
+a. firefox - we need to download and install the firefox in the local computer - 
+automatically  cypress will detect  firefox browser and you can select this browser for test
+
+b. safari browser  - directly we will not run on safari browser -  we can run our scripts on webkit enginer which is used to run the safari browser.
+
+chrome => chromium browser engine
+edge  =>  chromium browser engine 
+electron/ etc.. => chromium browser engine 
+firefox => firefox browser engine
+safari => webkit browser engine 
+[==========================================
+WebKit Support
+experimentalWebKitSupport
+Adds support for testing in the WebKit browser engine used by Safari. See 
+ for more information.
+npm install playwright-webkit --save-dev
+experimentalWebkitSupport:true 
+
+===========================================
+5 browser 
+a. electron - default 
+b. chrome 
+c. edge 
+d. firefox 
+e. webkit 
+
+npx cypress open select webkit/firefox browser in the browser selection and continue your execution 
+
+npx cypress run --browser chrome  => runs in chrome browser in head less mode 
+npx cypress run --browser edge 
+npx cypress run --browser webkit 
+====================================================
+UI mode 
+npx cypress run --browser webkit --headed 
+=================================================
