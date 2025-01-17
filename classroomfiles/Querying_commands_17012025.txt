@@ -1,0 +1,119 @@
+Good Morning !!!!!
+
+Recap !!!!!
+
+We understand how to record the test steps and basic assertions with the help of studio commands.
+
+experiementalStudio : true and then there is a torch icon to record the test steps and assertions 
+a. add a test step to the existing test case => focus on test case(it block)
+b. add a new test (it block)  then focus on test suite(describe block) 
+=> perform an action on the website to record the teststeps 
+=>Right click on any ui component  and add an assertion 
+ like text verification 
+class verification 
+href tag verification 
+these kind of assertions we learned from studio 
+
+2. playground  => inspect the website to traceout or locate UI element  to perform an action 
+for this there is a spy icon where we can locate the element and copy the cypress command along with the selector . 
+
+3. we need to inspect element from browser developer options => right click and inspect and get the element related code => in this code you can select respective selector 
+a. tag name selector  => cy.get('tagname')
+b. classname selector  => cy.get('.classname')
+c. id selector => cy.get('#id')
+4. attribute selector  => cy.get('[attributeName="value"]')
+
+
+<a class="mx-1 my-3 mb-6 f3 btn btn-large btn-desktop-white-cta" href="https://central.github.com/deployments/desktop/desktop/latest/win32" data-for-os="windows" data-download="windows">Download for Windows (64bit)</a>
+
+uniquely we need to identify the element if not we are not able to perform action . 
+there are 2 buttons if you perform click action on the button => tool is not an intelligent so it will fail to click on the button . 
+to do so we need to identify uniquely before perform an action. 
+
+d. SelectorHub: is plugin to the browser to locate the element css selector and xpath . 
+
+cy.get('.d-inline-block.m-2.m-sm-4.current')
+cy.get('body > header:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(4) > a:nth-child(1)')
+cy.get('.d-inline-block.m-2.m-sm-4.current')
+
+automation : 
+1. locate the elements  => querying the website 
+perform query whether this UI element is exist or not 
+cypress querying commands 
+
+Querying commands  => just verify whether this UI element exist in the website or not .
+exchange the information between cypress and website with the help of this querying command .
+request and response .
+cypress will request through querying command - website will respond accordingly . 
+
+a.cy.get() 
+b. cy.contains()
+c. cy.within()
+d. cy.root()
+====================================================
+get:
+Get one or more DOM elements by selector or alias.
+
+Syntax: 
+cy.get(selector)
+cy.get(alias)
+cy.get(selector, options)
+cy.get(alias, options)
+
+cy.get('.list > li') // Yield the <li>'s in .list
+=====================================================
+as:
+
+Assign an alias for later use. Reference the alias later within a cy.get() query or cy.wait() command with an @ prefix.
+
+An alias as defined using the .as() command and referenced with the @ character and the name of the alias.
+cy.get('.list > li').as('lilist')
+cy.get('@lilist')=cy.get('.list > li')
+
+cy.get('.classname').as('classnameSelector')
+cy.get('@classnameSelector')
+as is used to assign name for aliasing 
+@ is used to educate cypress => I am using aliasing to locate the element 
+.=> class name 
+#=> iD
+@=> aliasing 
+======================================================
+Yields :
+
+cy.get() yields the DOM element(s) it found, or the results of the alias lookup.
+cy.get() is a query, and it is safe to chain further commands.
+=====================================================
+contains:
+
+Get the DOM element containing the text. DOM elements can contain more than the desired text and still match. 
+
+examples:
+cy.get('.nav').contains('About') // Yield el in .nav containing 'About'
+cy.contains('Hello') // Yield first el in document containing 'Hello'
+
+// yields input[type='submit'] element then clicks it
+cy.get('form').contains('submit the form!').click()
+
+======================================================
+within -
+Scopes all subsequent Cypress commands to within the element. Useful when working within a particular group of elements such as a <form>.
+
+It is unsafe to chain further commands that rely on the subject after .within().
+
+
+=======================================================
+cy.root()
+
+cy.root() // Yield root element <html>
+cy.get('nav').within(($nav) => {
+  cy.root() // Yield root element <nav>
+})
+=======================================================
+combinator selectors 
+attribute filters 
+=======================================================
+
+2. Perform an action 
+
+3. Add an assertion 
+
