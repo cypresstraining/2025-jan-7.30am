@@ -1,0 +1,10 @@
+Good Morning !!!!!
+Recap : 
+Querying commands => locate the element in the DOM 
+class="dropdown-toggle"	
+
+[type="text"]
+
+within form  => you can get the result 2 
+
+out side of the form get 3 results 
