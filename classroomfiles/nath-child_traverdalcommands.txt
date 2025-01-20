@@ -1,0 +1,27 @@
+Good Morning!!!!!
+
+CSS selectors : 
+1. basic selectors 
+2. combinator selectors  - > / space 
+3. nth:child(1) // first child 
+=======================================================
+
+:first-child =>	p:first-child
+li:first-child
+Selects the element that is the first child of its parent (among a group of sibling elements)
+
+:last-child =>	li:last-child	
+Selects any <li> element that is the last child of its parent
+:nth-child() =>	p:nth-child(2)	
+
+Selects any <p> element that is the second child of its parent
+
+ul:nth-child(1) => select any <ul> element that is the first child of its parent 
+input:nth-child(4) => 
+select any <input> element that is the 4th child of its parent 
+
+targetelement:nth-child()
+======================================================
+cy.get(' > nav:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)').click()
+body
+
