@@ -1,0 +1,30 @@
+We are understanding what is api and how to do api testing?
+=> what is api ? 
+=> api methods
+=> api status codes with the help of postman academy lecturers. 
+
+now we want to automate those apis with the help if cypress 
+cy.request() to access the API 
+it is fast compated to the cy.visit() // UI => loading completion of the page
+
+cy.request('GET','http://localhost:8888/users/827').then(function(res)) {
+expect(res).
+}
+
+
+Yields 
+cy.request() yields the response as an object literal containing properties such as:
+
+status
+body
+headers
+duration
+
+
+Data base details : 
+
+SQL SERVER IP :	SQL1001.site4now.net
+Database Name :	db_ab13c7_n4705_1
+User Name :db_ab13c7_n4705_1_admin	
+Password :Ram123ram
+	
