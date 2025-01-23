@@ -1,0 +1,68 @@
+We are trying to understand different types of actions applicable:
+1. click()
+2. click(position)
+3. click(coordinates)
+4.dblclick()
+5.rightclick()
+6.click({force:true}
+7.click({multiple:true)
+8.type()
+9.type(spl characters {ctrl})
+10.type({force:true})
+11.type({delay:100})
+clear() is used to clear the existing text with in the selected textbox 
+
+12.check()
+13.check({force:true})
+14.check(["","",""])
+15.uncheck()
+Radio button do have only check - do not have uncheck()
+Checkboxes do  have both check to select and uncheck to deselect the previously selected one 
+
+//invoke is used to apply a function on the previously yielded subject.
+
+If you chain further commands off of .invoke(), it will be called multiple times. If you only want the method to be called once, end your chain with .invoke() and start fresh with cy afterwards.
+
+
+.invoke(functionName)
+.invoke(options, functionName)
+.invoke(functionName, args...)
+.invoke(options, functionName, args...)
+
+examples for invoke:
+cy.get('.input').invoke('val').should('eq', 'foo') // Invoke the 'val' function
+cy.get('.modal').invoke('show') // Invoke the jQuery 'show' function
+cy.wrap({ animate: fn }).invoke('animate') // Invoke the 'animate' function
+
+Yields 
+.invoke() yields the return value of the method.
+.invoke() is a query, and it is safe to chain further commands.
+If you chain additional commands off of .invoke(), the function will be called multiple times!
+
+cy.wrap() is a method to convert JS code into cypress code 
+and then perfrom cypress assertions and actions 
+
+const fn = () => {
+  return 'bar'
+}
+
+cy.wrap({ foo: fn }).invoke('foo').should('eq', 'bar') // true
+
+invoke to make a hidden element visible:
+
+cy.get('div.container')
+  .should('be.hidden') // element is hidden
+  .invoke('show') // call jquery method 'show' on the '.container'
+  .should('be.visible') // element is visible now
+  .find('input') // drill down into a child "input" element
+  .type('Cypress is great') // and type text
+
+
+manipulate html code as per your wish - by using functions or Jquery methods.
+
+Use .invoke('show') and .invoke('trigger') //progress bars
+
+target="_blank" is used to open the particular link the new tab. if it is the case cypress is not able to understand or track that URL or not able to automate that new tab . 
+to fix this we need to play with that target="_blank"
+by using invoke we need to remove this attribute 
+invoke('removeAttr', 'target')
