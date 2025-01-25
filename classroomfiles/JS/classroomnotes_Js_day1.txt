@@ -1,0 +1,141 @@
+Good Morning !!!!!
+Recap !!!!!
+Different cypress commands to automate the Web application UI. 
+
+Querying commands
+Traversal commands 
+Actions
+Navigational commands 
+Viewport 
+Assertions 
+invoke/trigger
+wrap 
+=======================================
+Java script - a programming language 
+=======================================
+What is JavaScript ?
+Why do we learn this Java script as a Cypress automation tester?
+what we need to learn? 
+
+=>What Is JavaScript? JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. It allows developers to create dynamically updating content, use animations, pop-up menus, clickable buttons, control multimedia, etc.
+
+=> to customize your automation scripts we are  using JavaScript. 
+========================================================
+a. variables declaration => var/let/const 
+b. Operators  - Athematic operators /logical operators/comparison operators 
+c. Data types -
+1. Primitive data  types -store single value 
+2. Reference data types - store multiple values 
+d. Class, object and function with real world example 
+e. Conditional statements - 
+if 
+else 
+else if 
+switch 
+f. Loops =>  for /while /do -while 
+g. Promises and closures in JS 
+========================================================
+Pending concepts in cypress - Advanced cypress concepts 
+1. Read the data from external files - CSV /Json 
+   cy.fixture()
+   cy.readFile()/cy.writeFile() 
+2. Custom commands => create your own cypress commands 
+3. Implement POM => page object model 
+   differentiate test and locators per page 
+
+4. BDD - Cucumber framework integration with cypress 
+5. API testing with cypress - cy.request()
+6. DB testing with cypress - MSSQL is the database  
+7. Advanced cypress.config.js file to go with 
+   different viewports
+   different locations to save the screenshots/videos/download folders
+   testisolation
+   test retries 
+ 
+8. Cypress cloud - commercial 
+  a. how to connect your local cypress app with cypress cloud 
+  b. how integrate  your cypress cloud with GitHub code 
+  c. for checkins automatically  run the cypress tests
+  d. Integrate you cypress cloud with GitHub Actions - Continuous integration tool.
+  e. Cypress cloud reports 
+9. Allure reports - how to setup  in your project 
+   run the report -  evaluate the report . 
+=======================================================
+what is variable in JS: 
+
+we need to store a value in the variable 
+
+number=15
+in the future we can use number instead of 10
+if use number this time it represents 15 
+
+different versions of JS: 
+The Original JavaScript ES1 ES2 ES3 (1997-1999)
+The First Main Revision ES5 (2009)
+The Second Revision ES6 (2015)
+The Yearly Additions (2016, 2017 ... 2021, 2022)
+
+usually JS will be exist in the webpage in the script tag.
+
+The <script> Tag
+In HTML, JavaScript code is inserted between <script> and </script> tags.
+
+<script>
+    var dataForFrontend = null;
+  </script>
+
+write javascript code and save with .js extension in vscode 
+
+	
+
+node "location of the .js file"
+
+<script>
+    var theme = localStorage ? localStorage.getItem('theme') : null;
+    if (theme == null || theme === '') {
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      localStorage ? localStorage.setItem('theme', theme) : null;
+    } else {
+      theme = theme === 'dark' ? 'dark' : 'light';
+    }
+    document.body.classList.add(theme);
+  </script>
+
+
+<script>
+            document.addEventListener('load', new function () {
+                var s = document.createElement('script');
+                s.setAttribute('src', 'runtime.76ef72fda4cac4b6.js');
+                s.setAttribute('defer', 'true');
+                document.body.appendChild(s);
+            }, false);
+        </script>
+
+<script src="runtime.76ef72fda4cac4b6.js" defer="true"></script>
+
+terminal commands/Dos commands 
+
+1. change directory : cd your folder location
+2. clear : to clear the terminal 
+3. node is used to run the JS files 
+4. pwd : Present working directory => path of your current folder 
+
+
+var: we re-declare 
+and use it before initialize 
+and refer it as undefined 
+
+let : we do not re-declare with in the same block scope 
+{}
+we do not use let before initialize it - if use  before initialization it throws reference error 
+
+const: const must initialize  along with declaration 
+
+
+
+
+
+
+
+
+
