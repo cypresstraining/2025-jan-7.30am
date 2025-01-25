@@ -1,5 +1,22 @@
 ///<reference types="cypress" />
 describe("traversal commands test suite",()=>{
+/* Traversal commands used to navigate between different UI elements without using complex selectors
+   improtant list of commands in traversal cokmmands : 
+mostwidely used to traversal command is eq
+eq(0) => first element in the list  => indext start with zero
+eq(-1)=> last element in the list 
+eq(2)=> 3rd element in the list 
+
+   1.find => select all decendent selectors 
+   2.filter() => existance of matched selector 
+   3.first() => locate the first element from the list 
+   4.next() => travel to next element from the current selection
+   5.last() => last element from the list 
+   6.nextAll ()/nextUntill -prevAll/PRevUntill = based on need we can look for it 
+   7.not() => remove the element from the list 
+   8.prev()
+*/
+
     beforeEach(()=>{
         cy.visit('https://example.cypress.io')
     })
@@ -118,4 +135,5 @@ describe("traversal commands test suite",()=>{
             cy.get('.traversal-pills .active')
             .siblings().should('have.length', 2)
          })
+
 })

@@ -1,0 +1,131 @@
+Good Morning !!!!!
+Recap: 
+Yesterday we understand  about different actions 
+1.select for dropdowns 
+2. multiple select for dropdowns 
+3. scrollIntiView() 
+4. ScrollTo() 
+5. invoke() is used to call the function to manipulate as per your need 
+6.wrap is used to convert your JS code into cypress code 
+7. trigger() is used to apply the invoked change 
+sliders we are using this trigger and invoke 
+
+Jquery methods we are using to manipulate your code 
+show()
+val()
+change()
+========================================================
+Assertions part once again 
+should() 
+expect("target").to.be.eq(expected )
+
+implicit assertion that means that command it self will have the assertion 
+if it locate the element that is fine 
+if not it will fail . 
+
+explicit assertion you need add an extra assertion to verify particular value / class name etc...
+
+Webtable : 
+<table> </table>
+thead => table heading 
+<th> => data in the table heading 
+tbody => table data 
+<tr> => table row 
+<td> => table Data 
+-============================================
+should:
+Create an assertion. Assertions are automatically retried until they pass or time out.
+
+Syntax:
+
+.should(chainers)
+.should(chainers, value)
+.should(chainers, method, value)
+.should(callbackFn)
+
+cy.wrap({ foo: 'bar' }).its('foo').should('eq', 'bar') // Assert the 'foo' property equals 'bar'
+
+possibility to add multiple assertions .
+cy.get('nav') // yields <nav>
+  .should('be.visible') // yields <nav>
+  .and('have.css', 'font-family') // yields 'sans-serif'
+  .and('match', /serif/) // yields 'sans-serif'
+
+
+cy.get('form').should('have.class', 'form-horizontal')
+
+// have.attr comes from chai-jquery
+cy.get('#header a').should('have.attr', 'href')
+cy.get('#header a').should('have.attr', 'href', '/users')
+
+cy.get('#btn-focuses-input').click()
+cy.get('#input-receives-focus').should('have.focus') // equivalent to should('be.focused')
+cy.get()
+cy.contains()
+.should()
+
+expect().
+================================================
+// retry until we find 3 matching <li.selected>
+cy.get('li.selected').should('have.length', 3)
+
+// retry until this input does not have class disabled
+cy.get('form').find('input').should('not.have.class', 'disabled')
+// retry until this textarea has the correct value
+cy.get('textarea').should('have.value', 'foo bar baz')
+
+// assert the element's text content is exactly the given text
+cy.get('[data-testid="user-name"]').should('have.text', 'Joe Smith')
+// assert the element's text includes the given substring
+cy.get('[data-testid="address"]').should('include.text', 'Atlanta')
+// retry until this span does not contain 'click me'
+cy.get('a').parent('span.help').should('not.contain', 'click me')
+// the element's text should start with "Hello"
+cy.get('[data-testid="greeting"]')
+  .invoke('text')
+  .should('match', /^Hello/)
+// use cy.contains to find an element with its text
+// matching the given regular expression
+cy.contains('[data-testid="greeting"]', /^Hello/)
+
+// retry until the element with
+// data-testid "form-submit" is visible
+cy.get('[data-testid="form-submit"]').should('be.visible')
+// retry until the list item with
+// text "write tests" is visible
+cy.contains('[data-testid="todo"] li', 'write tests').should('be.visible')
+
+// retry until SOME elements are visible
+cy.get('li').should('be.visible')
+// retry until EVERY element is invisible
+cy.get('li.hidden').should('not.be.visible')
+
+// retry until loading spinner no longer exists
+cy.get('[data-testid="loading"]').should('not.exist')
+
+// retry until element has matching css
+cy.get('[data-testid="completed"]').should(
+  'have.css',
+  'text-decoration',
+  'line-through'
+)
+========================================================
+navigation method 
+back/previous state
+forward => next 
+reload
+======================================================
+viewport() 
+viewport
+Control the size and orientation of the screen for your application.
+
+cy.viewport(225,450)
+cy.viewport("iphone")
+
+cy.viewport(width, height)
+cy.viewport(preset, orientation)
+cy.viewport(width, height, options)
+cy.viewport(preset, orientation, options)
+
+
+========================================================

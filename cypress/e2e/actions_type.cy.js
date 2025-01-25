@@ -24,7 +24,9 @@ describe("type command test suite",()=>{
         cy.get('.action-email').type('{ctrl}{control}') //these are equivalent
         cy.get('.action-email').type('{meta}{command}{cmd}') //these are equivalent
         cy.get('.action-email').type('{shift}')
-        
+//{keyname} {ctrl} {backspace}{shift} {pageup}
+//{delay:1000}//1sec
+//{force:true}
         // Delay each keypress by 0.1 sec
         cy.get('.action-email').type('slow.typing@email.com', { delay: 100 })
         cy.get('.action-email').should('have.value', 'slow.typing@email.com')
@@ -48,5 +50,7 @@ cy.get('.action-blur').should('have.class', 'error')
 
   //clear
   cy.get('.action-email').type('qtramprasad@gmail.com').clear()
+  //type is used to type the data in textbox - clear is used to clear the data exist wtih in the textbox 
+
     })
 })

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Coordinates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #event-box {
+            width: 80%;
+            height: 300px;
+            border: 2px solid black;
+            margin: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            background-color: lightgray;
+        }
+        #popup {
+            position: absolute;
+            background: yellow;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Mouse Event Tracker (X, Y Coordinates)</h2>
+    <p>Move your mouse inside the box to see the coordinates.</p>
+    
+    <div id="event-box">
+        Move mouse here
+        <div id="popup"></div>
+    </div>
+
+    <script>
+        const eventBox = document.getElementById("event-box");
+        const popup = document.getElementById("popup");
+
+        eventBox.addEventListener("mousemove", (event) => {
+            const x = event.clientX;
+            const y = event.clientY;
+            popup.style.left = x + "px";
+            popup.style.top = y + "px";
+            popup.innerText = `X: ${x}, Y: ${y}`;
+            popup.style.display = "block";
+        });
+
+        eventBox.addEventListener("mouseleave", () => {
+            popup.style.display = "none";
+        });
+
+        eventBox.addEventListener("click", (event) => {
+            alert(`Mouse Clicked at: X=${event.clientX}, Y=${event.clientY}`);
+        });
+
+        eventBox.addEventListener("dblclick", (event) => {
+            alert(`Double Click at: X=${event.clientX}, Y=${event.clientY}`);
+        });
+    </script>
+
+</body>
+</html>
