@@ -1,0 +1,27 @@
+Good Morning !!!!!
+
+We are understanding the JS : 
+1. variable declaration 
+a. var
+b. let 
+c. const 
+var name;  is the declaration 
+var name="ram" ; is the initialization of the value 
+name="prasad"
+re declare is possible with var 
+re assigning the value is possible with var
+
+let x;
+let x=10; is not possible - reference error - redeclaration is not possible with let 
+let y;
+ y=10; assigning the value => 
+re assignment is -possible 
+
+const pi; => is not possible 
+const pi=3.14 ; 
+pi=4.14 => this is also not possible 
+
+if value will changes in future that should be let
+if value will be fixed even in future there should not be any change then that is const .
+
+ 
