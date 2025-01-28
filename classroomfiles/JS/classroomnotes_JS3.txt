@@ -1,0 +1,74 @@
+Good Morning !!!!!
+Recap: 
+We understand variable declaration -  var , let, const 
+var is a old browser supported variable declaration - 
+
+let , const - 2015 - ES6 
+
+var : 
+
+is used to re declare the variable in the same scope . 
+
+{} => scope is between the {}
+
+var x=10
+var x=20 
+
+let and const => we can not redeclare with in the scope 
+
+let y=20//global scope 
+{
+let y=30 //reference error 
+//blocked scope 
+}
+
+const pi=3.14 
+const pi =4.14 // this is not allowed - because const is declared as not changeable value 
+const pi =3.14
+{
+const pi=3.14 // is not allowed 
+}
+
+
+Reassignment .
+
+var x=10
+x=20 
+
+let y=20
+    y=30 
+
+const pi=3.14
+      pi=4.14 //this is not allowed 
+
+3. hoisting  : before you declare and initializing the variable or function - you can use it 
+console.log(a)// but in the var we can use it 
+undefined if you mention it as var
+var a=20 
+console.log(a) 
+
+let a=20 // reference error if use before you declare 
+const a=3.14 // reference error if use before declare. 
+
+in js we are suppose to declare the variable or function at the starting point of the scope to avoid hoisting errors.
+Declare first and then use it . to avoid unnecessary errors
+
+this is possible only with var- this var is not at all using in the latest JS version lije ES6 on word instead we are using let . 
+
+scope : 
+
+{} => blocked scope -  the variable you declare should be used inside of the scope 
+global scope - if you define inside of the block and use out side of the block 
+and vice versa=======================
+Data types : 
+1. primitive data types
+numbers: decimals 
+let x=10 
+let y=10.2 
+
+
+2. reference data types 
+
+
+
+
