@@ -37,9 +37,12 @@ Using const
 //x = 5;
 //y = 6;
 //z = x + y;
-console.log(x)//// ReferenceError: Cannot access 'x' before initialization
-console.log(y)// // ReferenceError: Cannot access 'y' before initialization
-console.log(z)
+console.log(x)//// ReferenceError: Cannot access 'x' before initialization - for let 
+console.log(y)// // ReferenceError: Cannot access 'y' before initialization - for let 
+console.log(z)//before initialization of variable declared with var - return undeifed instead of initialization error 
+// if you use any variable before initialization 
+//- declared as var  - then it refer as undefied value - no error for var  - var is very old declaration type - first declaration type 
+//- declared as let - then it reference to the error while runnign the script- ReferenceError: Cannot access 'x' before initialization
 console.log("I am printing my sum of x,y in the console:",z)
 //Note:
 //It is considered good programming practice to always declare variables before use.
@@ -60,3 +63,16 @@ console.log("var x value:",x)
 console.log(y)
 console.log(z)
 console.log("I am printing my sum of x,y in the console:",z)*/
+
+//declare a variable with var /let/const 
+var name  // if you initialize that value you use if not undefined value you can print 
+let qualication // you initialize before you use it 
+const gender = "male" // for const initialization  is must 
+var name  //re-declare the variable with var 
+
+ //Cannot redeclare block-scoped variable 'qualication'.ts(2451)
+ {
+    let qualication
+    let qualication
+
+ }

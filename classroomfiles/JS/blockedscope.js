@@ -23,7 +23,7 @@ console.log("global scope after re asisgnment",globalScope)
 //100 - blocked scope variable can not use out side of the block
 
 //const pi=3.14
-console.log("out side of block",pi)
+console.log("out side of block",pi) //ReferenceError: Cannot access 'pi' before initialization
 {
 const pi=4.14 //const not eligible for re declare with in the blocked scope 
 console.log("inside of block",pi)

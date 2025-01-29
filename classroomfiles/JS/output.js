@@ -85,7 +85,7 @@ let InternalX
 let y=20
 
 //Variables declared with let must be Declared before use
-console.log($X)
+//console.log($X)
 //let X=20 //Variables declared with let must be Declared before use
 //var X=25
 
