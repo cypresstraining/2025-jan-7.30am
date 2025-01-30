@@ -1,0 +1,30 @@
+Variable declaration - 
+var => outdated
+let  => variables
+const => fixed 
+=> block scope 
+
+{} => if you declare a variable then 
+you can not redeclare the let , const 
+you can reassign the value for let and not for const 
+
+hoisting : Js 
+we can move all declarations to the top of the block or file 
+
+either you can type all declaration at top of the script or block 
+
+if not JS will do these things 
+
+var x; declaration => hoisting 
+x=10; initialization => not hoisting 
+
+let x; declaration => hosting 
+x=10; initialization => not hoisting  => without initialization let will not use the variable value 
+const x; declaration => hoisting 
+x=10; initialization => hot hoisting  => 
+let and const =>  without initialization we were not able to use the value before initialization. hence it through a reference error.
+======================================================
+
+
+
+ 
