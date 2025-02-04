@@ -1,0 +1,43 @@
+Recap: 
+
+1. variables declaration 
+initialization 
+hoisting 
+reassignment 
+redeclaration 
+2. operators 
+a. arthematic operators 
+b. logical operators 
+c. assignment operators 
+d. conditional operator 
+3. Data types -
+primitive data types - 
+a. string 
+b. number
+c. Boolean 
+reference data types -
+a. Arrays 
+b. objects 
+c. functions 
+d. date function 
+4. Conditional statements 
+if 
+if-else 
+if - else if - else 
+switch 
+
+5. Loops 
+for - 
+for - in 
+for - of 
+
+while 
+
+do while 
+
+6. Arrow functions-
+7. array methods /string methods
+
+lets find the length of array - 
+string length 
+
