@@ -1,0 +1,43 @@
+Good Morning !!!!!
+
+Array methods 
+
+Class 
+Object 
+
+extends class  => 
+constructor 
+super() //call the parent constructor 
+
+import 
+export the classes 
+
+
+1. create a class with actual methods => which is not visible to outside of the class 
+class className {
+//here you can define methods 
+}
+to call those methods outside of the class 
+2. create an object to use the class methods 
+obj1=new className()
+obj2=new ClassName()
+
+3. object.method(arg1) to call the methods
+obj1.method()
+obj2.method() 
+
+4. extending the parent class methods in to current class 
+class ClassName1 extends className{
+super() //to call the parent class constructor 
+
+create your own methods here 
+
+}
+
+obj3 =new className2() //child class object is created 
+obj3.parentClassMethod() //super keyword and extends 
+//class 
+//extends the class 
+//object creation  // constructor
+//super() //parent constructor 
+=======================================================
