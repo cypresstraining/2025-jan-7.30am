@@ -8,9 +8,9 @@ export class Animal {
     }
   }
   
-  export const PI = 3.14;
+  export const PI = 3.14;//variable export
   
-  export function add(a, b) {
+  export function add(a, b) { //function export 
     return a + b;
   }
   

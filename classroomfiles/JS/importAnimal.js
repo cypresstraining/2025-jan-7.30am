@@ -1,6 +1,6 @@
 import { Animal, PI, add } from './animal.js';
-
-const dog = new Animal('Dog');
+//named import for class, variable and function
+const dog = new Animal('Dog'); //creating a object for Animal class 
 dog.sound();
 
 console.log(`Value of PI: ${PI}`);
