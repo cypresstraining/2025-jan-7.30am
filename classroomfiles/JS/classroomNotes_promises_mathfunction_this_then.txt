@@ -1,0 +1,38 @@
+1. custom keyword  => 
+function () 
+how to call the function ()
+
+our own methods or cypress keywords 
+
+2. read the data from fixtures with the help of cy.fixture()
+cy.readFile()
+cy.writeFile()
+3.cy.session()/cy.cookies()
+4. Read the data from csv file 
+5. then/this usage in the cypress 
+
+POM => class file with selectors 
+import that class file into describe()  
+
+Cucumber integration => 
+Given
+When 
+Then 
+
+Integration with cypress cloud 
+
+integration with GitHub 
+integration with GitActions // CI => 
+parallel execution 
+
+topups :
+Database testing in cypress  => MSSQL 
+API testing in cypress  => cy.request()
+
+get
+post
+put
+patch 
+delete 
+
+
