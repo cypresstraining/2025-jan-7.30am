@@ -19,7 +19,7 @@ beforeEach(()=>{
         })//visit the homepage*/
 
         cy.get('.ico-register').click() //Locate the register link through the classname selector and perform click action 
-        cy.url().should('eq','http://ramanasoft123-001-site1.anytempurl.com/register?returnUrl=%2F')
+        cy.url().should('eq','http://ramanasoft123-001-site1.anytempurl1.com/register?returnUrl=%2F')
         // cy.url() store the current URL of the application 
         //should('eq') => is used to match your URL with expected URL mentioned in the code
 
@@ -45,11 +45,14 @@ beforeEach(()=>{
         cy.get('#LastName').type('prasad') //textbox type
         cy.get('#Email').type('qtramprasad2@gmail.com') //textbox -type
         cy.get('#Company').type('QualityThought') // textbox - type
-        cy.get('#Newsletter').uncheck() //checkbox to deselect - uncheck() // to select -check()
-        cy.get('#Password').type('123456') //it is a text box -perfrom type action
+        cy.screenshot('companyname') //with your name
+        cy.screenshot() //with default name
+        cy.get('#Newsletter').uncheck().screenshot() //checkbox to deselect - uncheck() // to select -check()
+        cy.get('#Password').type('123456').screenshot("password") //it is a text box -perfrom type action
         cy.get('#ConfirmPassword').type('123456') //as it is a textbox perfrom type action
         cy.get('#register-button').click() //as it is a button perfrom click action
        cy.get('.result').should('contain','Your registration completed')
        cy.contains('Continue').click()
+       cy.screenshot()
     })
 })
