@@ -15,12 +15,12 @@ hello = function() {
   console.log(sum(1,5))
 
   //arrow function syntax with one statement 
-
-  let mul = (a, b) => a * b;//arrow function
+//()=> {}
+  let mul = (a, b) => a * b;//arrow function with arguments and no retrun 
   console.log(mul(1,5))
-  let afuction = (x,y)=>{
+  let afuction = (x,y)=>{ //with arguments and return keyword 
     return x*y
   }
-  fun=()=>"Hello"
+  fun=()=>"Hello" //without arguments in arrow function
   console.log(fun())
   console.log(afuction(10,2))

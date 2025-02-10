@@ -32,12 +32,9 @@ console.log("second element -",fruits[1])//Banana
 console.log(fruits[2])//Grapes
 console.log(fruits[3])//Papaya
 console.log(fruits[4])//strawberry
+//eq() avaialble in cypress
 //console.log(fruits[5])//undefied 
-//console.log(fruits[-1]) //last element of the array -strawberry
-//console.log(fruits[-2])//last but one  - papaya
-//console.log(fruits[-3])
-//console.log(fruits[-4])
-//console.log(fruits[-5])
+
 console.log(fruits[5])//undefied 
 const cars={ //object
     "name":"toyota",

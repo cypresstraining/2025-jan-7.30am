@@ -15,9 +15,9 @@ console.log("divison",x/y)//11/4
 console.log("reminder",x%y)//11%4
 //assignment operators 
 let a = 10;
-a += 5;  // a becomes 15
+a += 5;  // a becomes 15 a= a+5
 console.log("a+=5 :",a)
-a -= 3;  // a becomes 12
+a -= 3;  // a becomes 12a= a-3
 console.log("a-=3 :",a)
 
 a *= 2;  // a becomes 24

@@ -13,7 +13,7 @@ do {
   i++; // Increment i
 } while (i <1); //if condition fail 
 
-console.log(i)
+console.log(i)//12
 //one example with while , do -while 
 /*
 let x = 1;

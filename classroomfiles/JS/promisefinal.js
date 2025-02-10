@@ -3,8 +3,7 @@ const kid = {
     
     askForChocolate: function () {
       console.log(this.name + " asks for chocolate... 🍫");
-      console.log(Math.floor(12.8))
-      console.log(Math.floor(12.2))
+      
       new Promise((resolve, reject) => {
         setTimeout(() => {
           let chocolateAvailable = Math.random() > 0.5; // Random true/false

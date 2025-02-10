@@ -1,3 +1,5 @@
+//exmaple for named export 
+
 export class Animal {
     constructor(species) {
       this.species = species;

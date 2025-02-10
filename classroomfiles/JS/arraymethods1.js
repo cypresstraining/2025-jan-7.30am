@@ -161,7 +161,7 @@ colors.copyWithin(1, 3);  //"yellow", "purple"
 //["red", "yellow", "purple" "yellow", "purple"]
 console.log(colors);
  numbers = [10, 20, 30, 40, 50];
-numbers.copyWithin(2, 1, 3); //10, 20 
+numbers.copyWithin(2, 1, 3); //20, 30
 console.log(numbers);
 
 

@@ -1,4 +1,6 @@
-//named import 
+//named import  import {exported item} from "location of the file"
+//default import import classname from "location of the file"
+//only exported classes avaialble in this JS file to use 
 import { Vehicle } from './Vehicle.js';
 //extends the imported class 
 //here vehicle is a parent class that extended to the class car 
