@@ -1,4 +1,5 @@
-///<reference types="cypress" />
+///<reference types="cypress"/>
+
 describe('Ecommerce new customer registration',()=>{
 beforeEach(()=>{//before every it block it will execute
     cy.visit('http://ramanasoft123-001-site1.anytempurl.com/',{
@@ -15,6 +16,12 @@ it('To Test the  Login  with studio commands',()=>{
     cy.get('.ico-login').click();
     cy.get('h1').should('be.visible');
     cy.get('h1').should('have.text', 'Welcome, Please Sign In!');
+    cy.get('h1')  // Select the element
+  .should('have.css', 'font-family', 'Arial, sans-serif')  // Font type
+  .should('have.css', 'font-size', '16px')  // Font size
+  .should('have.css', 'color', 'rgb(255, 0, 0)');  // Font color (Red)
+  .should('have.css','color','red')
+
     cy.get('.new-wrapper > .title > strong').should('be.visible');
     cy.get('.new-wrapper > .title > strong').should('have.text', 'New Customer');
     cy.get('.text').should('be.visible');

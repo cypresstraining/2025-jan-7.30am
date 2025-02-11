@@ -1,4 +1,5 @@
-///<reference types="cypress" />
+///<reference types="cypress"/>
+
 describe('Ecommerce new customer registration',()=>{
 beforeEach(()=>{
     cy.visit('http://ramanasoft123-001-site1.anytempurl.com/',{
@@ -17,7 +18,6 @@ beforeEach(()=>{
             } // to get out of autherization issue in the cy.visit() we are supplying auth {}
             //Cypress will automatically apply the right authorization headers if you're attempting to visit an application that requires Basic Authentication.
         })//visit the homepage*/
-
         cy.get('.ico-register').click() //Locate the register link through the classname selector and perform click action 
         cy.url().should('eq','http://ramanasoft123-001-site1.anytempurl1.com/register?returnUrl=%2F')
         // cy.url() store the current URL of the application 
@@ -38,7 +38,6 @@ beforeEach(()=>{
 // in radio button , if you select one option automatically other option will be unchecked 
 // so no need of explicit uncheck() in your code 
 //but if it is the checknbox, we have to uncheck perticular selection manually 
-
         cy.get('[for="FirstName"]').should('have.contain','First name:')
         cy.get('#FirstName').type('ram') //text box type 
         cy.get('[for="LastName"]').should('contain','Last name:')
