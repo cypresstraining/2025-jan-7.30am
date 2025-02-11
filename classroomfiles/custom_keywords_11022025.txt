@@ -1,0 +1,70 @@
+Recap!!!!!
+
+Screenshot and video default folder change
+ScreenshotOnfailure:true/False 
+removeAssets beoreRun : true //previous runn related screenshots/videos will be cleared 
+
+cy.screenshot() 
+cy.get().screenshot('yourname')
+
+retries: 2  => openMode/runMode 
+retries:{
+openMode:1,
+runMode:2} 
+
+whenever a failure occur in the execution we can verify that failure again to confirm the fail. 
+=======================================================
+shadow dom => 
+we are adding extra dom elements through encapsulation 
+shadow-root => a facility to add additionalal dom elements
+
+cy.get().shadow()
+cy.get().find().shadow() // whenever you find a shadow-root then add shadow() to provide a green signal to traversal into the shadowroot element 
+=======================================================
+Custom keywords =>
+We are suppose to create our own cypress methods like 
+cy.get()
+
+or you can overwrite the existing methods 
+
+you do not worry about these things - cypress people helping you with the sample syntax in the custom file 
+
+cypress /support /custom.js 
+this is a place where you can write or  update the existing cypress methods
+
+There are two API available for adding custom commands:
+
+Cypress.Commands.add() - use to add a custom command to use when writing tests
+Cypress.Commands.add("login",(email,password)=>{
+//write your code  => repetitively you are using this code in your test // that should be replaced with a custom keyword and use it instead of writing code again and again 
+
+})
+Cypress.Command.overwrite() - use to override an existing built-in Cypress command or reserved internal function. Caution: this overrides it for Cypress as well and could impact how Cypress behaves.
+
+
+
+Cypress.Commands.add(name, callbackFn)
+Cypress.Commands.add(name, options, callbackFn)
+Cypress.Commands.addAll(callbackObj)
+Cypress.Commands.addAll(options, callbackObj)
+Cypress.Commands.overwrite(name, callbackFn)
+
+
+
+Cypress.Commands.add('login', (email, pw) => {})
+Cypress.Commands.addAll({
+  login(email, pw) {},
+  visit(orig, url, options) {},
+})
+Cypress.Commands.overwrite('visit', (orig, url, options) => {})
+
+
+have a look at frame work for 15 mins and understand 
+what is .feature file 
+scenario 
+Given 
+when 
+then conditonations to convert your manual test into BDD test
+then we easily adopt this into automation 
+
+https://cucumber.io/docs/gherkin/reference#feature

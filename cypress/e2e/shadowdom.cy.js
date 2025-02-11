@@ -1,6 +1,6 @@
 ///<reference types="cypress" />
 describe('shadow dom',{includeShadowDom:true},()=>{
-    it('shadow dom not enabled',()=>{
+    it('shadow dom at suite level enabled',()=>{
         cy.visit('http://watir.com/examples/shadow_dom')
         cy.get('#shadow_host')
         //.shadow()       //
@@ -12,7 +12,7 @@ describe('shadow dom',{includeShadowDom:true},()=>{
         .find('#nested_shadow_content').should('contain','nested text')
     })
 
-    it('shadow dom not enabled',()=>{
+    it('shadow dom at suite level enabled',()=>{
         cy.visit('http://watir.com/examples/shadow_dom')
         cy.get('#shadow_host')
       //  .shadow()
