@@ -1,13 +1,8 @@
 {
-<<<<<<< Updated upstream
-  "devDependencies": {
-    "cypress": "^13.17.0",
-    "playwright-webkit": "^1.49.1"
-  }
-=======
+
     "devDependencies": {
         "cypress": "^13.17.0",
         "playwright-webkit": "^1.49.1"
     }
->>>>>>> Stashed changes
+
 }

@@ -2,19 +2,15 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-<<<<<<< Updated upstream
-    //experimentalStudio:true,
-    experimentalWebKitSupport: true,
-=======
-    experimentalWebKitSupport:true,
->>>>>>> Stashed changes
+experimentalStudio:true,
+experimentalWebKitSupport:true,
     video:true,
     experimentalRunAllSpecs:true,
     //testIsolation:false,
     //trashAssetsBeforeRuns:false,
     //screenshotsFolder:"Ram/Screenshots",
     //videosFolder:"Ram/Videos",
-    screenshotOnRunFailure:false,
+    //screenshotOnRunFailure:false,
     //retries:{
      // openMode:2,
      // runMode:1
