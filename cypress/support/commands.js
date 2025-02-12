@@ -10,16 +10,7 @@
 //
 //
 // -- This is a parent command --
-<<<<<<< Updated upstream
- Cypress.Commands.add('login', (email, password) => { 
-    cy.get('.ico-login').click();
-    cy.get('#Email').type('admin@yourstore.com');
-    cy.get('#Password').type('adminadmin');
-    cy.get('#RememberMe').check();
-    cy.get('form > .buttons > .button-1').click();
 
-  })
-=======
 Cypress.Commands.add('login', (email, password) => { 
     cy.get('.ico-login').click();
     cy.get('h1').should('have.text', 'Welcome, Please Sign In!');
@@ -46,7 +37,6 @@ Cypress.Commands.add('createParentcategory',(name)=>{
         cy.get("#ParentCategoryId").select("[None]")
         cy.get("button[name='save']").click()
 })
->>>>>>> Stashed changes
 //
 //
 // -- This is a child command --
