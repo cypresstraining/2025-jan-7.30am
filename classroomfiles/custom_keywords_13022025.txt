@@ -1,0 +1,38 @@
+Good morning !!!!!
+
+Recap: 
+we understand how to create custom keyword by using 
+
+a. new command
+Cypress.Commands.add('login',(email,password)=>{
+cy.visit("https://localhost:3000")
+cy.get('#email').type(email)
+cy.get('.password').type(password)
+cy.get('[button="submit"]').click()
+
+})
+
+Cypress.Commands.add("logout",()=>{
+
+cy.get('.logout',()=>{})
+
+}
+
+Cypress.Commands.add("clkbtn",()=>{})
+
+
+describe("customkeywordtest",()=>{
+
+it("myfirst custom keyword test",()=>{
+
+cy.login('admin@yourdomain.com','adminadmin')//login should be successful
+cy.login("wrongemail","wrong password")//it  will fail 
+
+you can changethe data for your connivence 
+
+})
+
+})
+b. all commands 
+Cypress.Commands.all()
+c. existing command 
