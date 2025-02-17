@@ -1,0 +1,13 @@
+Good Morning !!!!!
+
+As we are done with JS - 
+
+Cypress with advanced concepts 
+
+shadow dom : 
+There are some bits of shadow DOM terminology to be aware of:
+
+Shadow host: The regular DOM node that the shadow DOM is attached to.
+Shadow tree: The DOM tree inside the shadow DOM.
+Shadow boundary: the place where the shadow DOM ends, and the regular DOM begins.
+Shadow root: The root node of the shadow tree.

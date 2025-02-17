@@ -1,0 +1,32 @@
+
+cy.fixture() // is a method to read the data from xternal file 
+
+.json // cypress 
+
+Assign an alias for later use. Reference the alias later within a cy.get() or cy.wait() command with a @ prefix. You can alias DOM elements, routes, stubs and spies.
+cy.get('#username').as('userId')
+cy.get('@userId') //usage of aliasing 
+cy.fixture('example.json').as('testdata') // in future you can your example.json file data with the help of testdata 
+
+difference between fixture() /readFile () 
+
+fiture() do not have log :true 
+readfile() do log the step in the execution pane 
+
+fixture() load the data before test and maintain the same data across the test. even though you change some thing it does not effect the execution 
+
+readFile() => load the data once again if some test  got failed and get the latest data to make it pass. 
+
+as // aliasing with the help of 
+function() // instead of arrow funcitons 
+this.testData.name // this is how to retrieve the value of the testData object 
+
+cy.fixture().as() 
+cy.fixture().then(function(data) {
+this.data=data
+})
+
+cy.readFile().as() //dynamically load the data before each step or assertion 
+cy.readFile().then(function($data){
+this.data=data
+})

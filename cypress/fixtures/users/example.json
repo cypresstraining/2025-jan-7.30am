@@ -1,8 +1,8 @@
 {
-  "name": "MyjsonName",
+  "name": "MyCypress",
   "email": "admin@yourstore.com",
   "password":"adminadmin",
-  "category":"mytest",
+  "category":"something",
   "price": 100000,
     "body": "Fixtures are a great way to mock data for responses to routes"
 }

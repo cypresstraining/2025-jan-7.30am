@@ -1,0 +1,7 @@
+name,email,password,category,price
+ram,admin@yourstore.com,adminadmin,mycypress,1000
+ram1,admin1@yourstore.com,adminadmin1,mycypress1,10001
+ram2,admin2@yourstore.com,adminadmin2,mycypress2,10002
+ram3,admin3@yourstore.com,adminadmin3,mycypress3,10003
+ram4,admin4@yourstore.com,adminadmin4,mycypress4,10004
+ram5,admin5@yourstore.com,adminadmin5,mycypress5,10005
