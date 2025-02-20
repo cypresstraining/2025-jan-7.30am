@@ -16,9 +16,11 @@ describe("MY local web application test suite",()=>{
     it.only("without plugin",()=>{
 
         cy.get('iframe').then(($iframe)=>{
-            let iframeBody=$iframe.contents('tbody').filter('tr')
+            let iframeBody=$iframe.contents().find('table')
             console.log(iframeBody)
             //.find('td')
+            cy.wrap(iframeBody).should('exist')
+            cy.wrap(iframeBody).find('tr').should('have.length',5)
         })
   
     })
