@@ -4,6 +4,7 @@ module.exports = defineConfig({
   e2e: {
 experimentalStudio:true,
 experimentalWebKitSupport:true,
+experimentalOriginDependencies:true,
     video:true,
     experimentalRunAllSpecs:true,
     //testIsolation:false,
