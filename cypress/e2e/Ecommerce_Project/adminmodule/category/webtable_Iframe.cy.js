@@ -14,13 +14,20 @@ describe("MY local web application test suite",()=>{
     })
 
     it.only("without plugin",()=>{
-
-        cy.get('iframe').then(($iframe)=>{
-            let iframeBody=$iframe.contents().find('table')
+        cy.get('iframe') //locate the iframe tag with in the application
+         .then(($iframe)=>{ //take iframe as a subject and do actions on the iframe subject 
+            let iframeBody=$iframe.contents()
+            //Get the children of each element in the set of matched elements,
+            //  including text and comment nodes.
+            .find('table')//find the table dom element with in the iframe 
             console.log(iframeBody)
             //.find('td')
-            cy.wrap(iframeBody).should('exist')
-            cy.wrap(iframeBody).find('tr').should('have.length',5)
+            cy.wrap(iframeBody).should('exist') // is this webtable exists or not 
+            cy.wrap(iframeBody).find('tr').should('have.length',5) // if exists do we have 5 rows in a table ? 
+            cy.wrap(iframeBody).find('tr').find('th').should('have.length',7)
+           cy.wrap(iframeBody).find('tr').find('td').eq(0).should('exist')
+           cy.wrap(iframeBody).find('tr').find('td').eq(0).should('have.text',1)
+
         })
   
     })

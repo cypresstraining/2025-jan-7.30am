@@ -1,0 +1,29 @@
+Recap: 
+
+how to understand the iframes 
+and by using plugin cypress-iframe we do handle iframes easily 
+cy.frameLoaded() it loads the iframe () and 
+you traverse through cy.iframe() 
+
+cy.get('iframe[type=""]') // you capture the iframe it return subject as iframe code 
+.then(function($iframe){
+//get the iframe body // required component by using Jquery methods 
+$iframe.contents().filter()
+const iframeTable=$iframe.contents().find('table')//outcome is table dom element 
+cy.wrap(iframeTable)//this is your  cypress subject 
+now you can dig more into your cypress subject 
+
+=> cypress alerts -> 
+
+a. alerts => window.alert()
+b. confirm => window.cofirm()  
+c. prompt  => stub and window()
+
+
+
+
+
+contents is used to retrieve the particular component DOM objects 
+
+
+})
