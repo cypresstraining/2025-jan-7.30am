@@ -1,6 +1,9 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: "645ocb",//this will provide the flexibility to the cypress app to connect with cloud 
+  
+
   e2e: {
 experimentalStudio:true,
 experimentalWebKitSupport:true,

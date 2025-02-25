@@ -84,10 +84,13 @@ cy.contains('Click for JS Confirm').click();
 
     });
   
-    it('Handles a JavaScript prompt (Input and Accept)', () => {
+    it.only('Handles a JavaScript prompt (Input and Accept)', () => {
       // Stub the prompt dialog to simulate input and acceptance
       cy.window().then((win) => {
-        cy.stub(win, 'prompt').returns('I am not in Test'); 
+        cy.stub(win, 'prompt') //we need to customizing / modifying to return your value
+        .returns('I am not in Test');//Makes the stub return the provided
+        //    cy.stub(win, 'prompt').returns('my custom message')
+ 
         // Simulate user input
       });
       //In end-to-end tests, replacing built-in window methods needs to happen after 
@@ -102,7 +105,7 @@ cy.contains('Click for JS Confirm').click();
       cy.get('#result').should('contain', 'You entered: I am not in Test');
     });
   
-    it('Handles a JavaScript prompt (Cancel)', () => {
+    it.only('Handles a JavaScript prompt (Cancel)', () => {
       // Stub the prompt dialog to simulate cancel
       cy.window().then((win) => {
         cy.stub(win, 'prompt').returns(null); // Simulate cancel
