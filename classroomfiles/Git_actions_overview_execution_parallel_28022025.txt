@@ -1,0 +1,57 @@
+We are understanding how to run your test scripts in CI pipeline with parallel execution. 
+
+Step#1 we need to identify which CI tool we need to use . 
+GitActions  => Github as  their version control system. 
+
+Github account is the pre requsite . 
+in your repository we do have Actions Tab
+in this Actions Tab we do have Workflow => 
+
+As part of your Repository integration with gitactions => 
+.github/workflows/cypress.yml  this file directs your cypress app or test runner how to do continuous integration with the gitactions.
+
+1. Name of the Test 
+2. When it needs to be triggered
+3. Jobs:
+    runs-on: ubuntu-latest - which os 
+a.  matrix:
+        containers: [1, 2] # Uses 2 parallel instances
+        containers: [1,2,3] # Uses 3 paralle instances to execute your tests 
+
+b. parallel: true 
+
+          parallel: true # Runs test in parallel using settings above
+
+
+we can able to execute your tests parallely to reduce time 
+test isiolation 
+
+1. Cypress cloud integration - withoutci
+2. cypress cloud integration with CI + github + Teams+JIRA 
+3. We will start with POM - export and import we would like to use the same concept
+
+4. BDD frame work 
+
+5. Allurereports -  we can integrate it 
+
+6. DB queries through the Cypress by using cy.task() 
+
+=> I will upload couple of example spec files in to your repositroy which demonistrate couple of UI elements like calendar / paginations etc..
+
+=> API testing with the help of cy.request() 
+methods:
+get
+post
+patch
+put 
+delete methods in the API testing 
+
+status codes : 
+200
+504
+404 
+
+basic idea about postman = manual testing tool 
+the same thing we can automate with cypress
+
+Resume preparation and interviewquestion and answers 
