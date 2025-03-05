@@ -1,0 +1,31 @@
+
+Recap: 
+
+We understand how to automate 
+a. alerts
+b. confirm alerts 
+c. prompts => cy.stub() 
+d. iframes 
+e. shadow doms 
+f. errors 
+======================================
+1. cypress app => 
+write the code and run the code in the local computer 
+
+cypress cloud  => 
+2. commercial version 
+a. we can integrate cypress app with cypress cloud 
+
+we can support GitHub integration 
+teams integration 
+jira integration 
+insights about your test run 
+CI tools integration 
+parallel execution 
+details reports - insights about your test runs 
+reply facility 
+flaky detection 
+
+a. projectID
+b. record key - 
+npx cypress run --record --key c5c5ead1-4ae6-4cd6-9fd7-82561b285d6f

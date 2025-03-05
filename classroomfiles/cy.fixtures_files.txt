@@ -30,3 +30,31 @@ cy.readFile().as() //dynamically load the data before each step or assertion
 cy.readFile().then(function($data){
 this.data=data
 })
+
+1. nrusimha you need to write a script to create a new manufacturer 
+b. customise that script with cy.fixture().as 
+
+catalog >> manufacturer 
+
+2. Naveen  => 
+you need to create product with below details 
+copy any product from flipkart and get those details into readFile().as() 
+
+3. Srikanth => 
+Create a subcategory with 
+cy.readfile().then(function(data){})
+
+
+
+json file => we do read data from csv file 
+comma separated version 
+
+how to read the test data exist in csv file : 
+1. install neat-csv package 
+npm install neat-csv@5
+
+2. import this neat-csv into your test 
+
+3. ReadFile and store the data into rows and columns 
+
+4, then use the data 

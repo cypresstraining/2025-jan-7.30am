@@ -1,0 +1,94 @@
+Recap: 
+We are trying to understand  what is iframe ?
+difficulty in tracingout the iframe with cypress?
+fix for iframe elements locating through cypress
+
+todo -so we would like create internal http-application to start with very basics. 
+=> we need to setup our own local server with sample html 
+<htm>
+
+<iframe> </iframe>
+cypress will stop here and not able to locate the element which inside of the iframe tag.
+
+</html>
+
+to do so to traceout this problem clearly we created our own application to test it 
+.html file you can open this file with the help of browser. 
+
+if there is a webtable in your project - 
+
+table  -  rows and columns 
+<tbody> entire table represents 
+<tr> table row 
+<th> table row heading 
+<td>table data 
+
+we can locate data exist in a table 
+
+2. what iframe => 
+why do we require a iframe . 
+I create a table with some data . in my webtable.html file 
+192.168.1.2:8080/webtable.html 
+
+I want to utilise this webtable.html in my another application or page 
+
+192.168.1.2:8080/iframe.html 
+with in this page I want to call the above webtable.html
+<iframe>192.168.1.2:8080/webtable.html  </iframe> 
+
+this tag will publish in webtable in a frame 
+ Rendering another page with in your webpage.
+through url => 
+
+as it is in side of  the iframe I can not move further into iframe without having proper test steps in cypress.
+
+to do so we installed npm install cypress-iframe 
+a. cy.frameLoaded() to load this iframe for testing 
+b. cy.iframe() is used to locate the element with in the loaded frame .
+cy.iframe() is like a cy.get() 
+.find() 
+. should() 
+
+alternative to the plugin - 
+
+we need to use jquery methods to load the iframe. 
+cy.get('iframe[type="xyz"]')//specific selector to locate the element 
+.then(($iframe)=>{
+//contains method from jquery to retrieve content of the 
+the frame. 
+
+let iframeBody =$iframe.contains('body') //javascript code
+cy.wrap('iframeBody').find().should() // convert js code into cypress subject 
+iframeBody
+
+})
+
+html pages = 2
+we want to put them in a server  => 
+http-server  => 
+1. 
+2. http://localhost:8080/webtable.html 
+
+
+in your project root folder => install http-server
+=> npm install http-server 
+this will install the http-server in your project directory
+
+=> npx http-server 
+
+
+Steps to automate your local web application by using cypress-
+
+1. install the http-server => npm install http-server
+2. launch the application => npx http-server 
+you can see the application URL in the terminal outcome 
+copy the URL  http://192.168.29.238:8081
+3. create a test suite with describe()with in it 
+use cy.visit(' http://192.168.29.238:8081')// launch the application in the cypress 
+4. npx cypress open 
+5. select your test 
+6. run the test
+7. evaluate the results and debug if any failure 
+
+
+tbody tr:nth-child(2) td:nth-child(1)

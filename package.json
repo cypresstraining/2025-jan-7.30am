@@ -6,6 +6,8 @@
 
         "cypress-iframe": "^1.0.1",
 
+        "cypress-sql-server": "^1.0.0",
+
         "playwright-webkit": "^1.49.1"
 
     },

@@ -1,0 +1,9 @@
+Promise : 
+
+promise is also like how you create an object to a class 
+
+new classsName()  
+new Promise() // but this will return either 
+
+=> resolve 
+=> reject 

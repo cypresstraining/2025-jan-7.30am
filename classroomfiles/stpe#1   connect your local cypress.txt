@@ -1,0 +1,46 @@
+stpe#1 :  connect your local cypress app with cypress cloud 
+a. projectID 
+b. record key 
+
+by using above two options -  we can run your test locally with below command
+1.  projectId: "yo9zrb", 
+2.  npx cypress run --record --key 628164df-6aa9-422e-b64a-bdfe8b7b77dd
+
+CI => continuous integration => you can commit the automation code to the repository . 
+=> whenever we commit the code to the repository or scheduled intervals => code will build automatically and run automatically provide the result . 
+
+=> GitHub actions 
+=> Jenkins 
+=> bitbucket
+=> gitlabs 
+etc...
+but also we do parallel execution to save your execution time 
+1 machine - 12 hours 
+2 machines - 6.30 hours 
+4 machines - 3.15 min 
+8 machines -  1h30min
+16 machines - 45mins 
+all tests are independent - test isolation 
+CI => based on commit auto executed your tests
+so that new code change related results we can evaluate to understand any broken code. 
+
+this to parallel execution as well 
+GitHub actions  => CI tool to provide continuous integration and parallel execution 
+
+Step#2: 
+Login to your GitHub repository - 
+Set CYPRESS_RECORD_KEY in your GitHub repo → Settings → Secrets → Actions:
+
+
+Step#3: integrate JIRA 
+
+pre requisite :  JIRA URL for your project - owner of the project
+
+then install the cypress app from atlasian market place 
+and configure your project for that JIRA URL 
+=> 
+Cloud integration with JIRA, teams, GitHub and gitactions 
+
+
+
+

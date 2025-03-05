@@ -1,0 +1,80 @@
+Cypress - SQL server - Ecommerce application 
+
+CRUD operation on your application 
+create data => create table table name
+retrieve data => select data table 
+where conditions 
+joins 
+
+update data => insert columns table name data 
+delete data => delete the data from table 
+
+Data validations => 
+
+your actions through the apis or back end services - saved data correctly or not we can validate with the help of queries 
+select * from table table name 
+select * from customer 
+select customername from customer 
+select customerName,customer age, customer salary from customer 
+select * from orders 
+select * from orders where order_date="current_Date"
+
+
+SQL => 
+APIs=> 
+
+
+
+by default cypress do not have this capacity to handle directly with databases .
+cy.task()  to deal with this 
+
+
+PS D:\Automation\Web Automation\Cypress\2025\2025-jan-7.30am> npm install --save-dev cypress-sql-server
+
+up to date, audited 200 packages in 2s
+
+40 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS D:\Automation\Web Automation\Cypress\2025\2025-jan-7.30am>
+
+
+
+"db": {
+    "userName": "",
+    "password": "",
+    "server": "",
+    "options": {
+        "database": "",
+        "encrypt": true,
+        "rowCollectionOnRequestCompletion" : true
+    }
+}
+supply Data base server details in cypress.config.js file 
+
+by using plugin supported procedure or steps will do the connection like how you do through the ms sql server in our local computer. 
+
+server is located 
+authentications with username and password 
+
+as per the plugin developer helping document we can connect with the DB
+by using above steps .
+
+once connection is established we can make a query with the provided methods in the plugin . 
+
+1. install the plugin - cypress-sqlserver
+why because we are using the sqlserver database 
+
+2. import the required settings into the cypress.config.js 
+3. import SQlserver from 'cypress-sqlserver' in e2e.js 
+4. write a query to the databse with the help of 
+cy.sqlserver('mention your query here ').then(function(results) {
+expect(results).not.to.be.empty
+expect(results). all your assertions will applicable here 
+
+
+})
+
+
+learn your SQL queries to implement this . 
