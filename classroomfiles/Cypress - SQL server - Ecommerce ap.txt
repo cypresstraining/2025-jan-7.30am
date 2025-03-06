@@ -78,3 +78,53 @@ expect(results). all your assertions will applicable here
 
 
 learn your SQL queries to implement this . 
+
+
+DB connection details : 
+
+How to setup SQLSERVER in Cypress.
+1. Install the plugin 
+2. Setup the configuration of the DB in the cypress.config.js 
+server: sql1002.site4now.net
+Databse:db_ab6037_n4705_1
+username:db_ab6037_n4705_1_admin
+password:Welcome@0508
+
+
+sample configuration for reference:
+const sqlServer = require('cypress-sql-server');
+
+ setupNodeEvents(on, config) {
+      // implement node event listeners here
+      // Database configuration
+      config.db = {
+        userName: "db_ab6037_n4705_1_admin",
+        //db_ab6037_n4705_1_admin
+        //username to connect to the databse
+        password: "Welcome@0508",
+        //password to connect the DB
+        server: "sql1002.site4now.net",
+        //sql1002.site4now.net - server URL
+        options: {
+          database: "db_ab6037_n4705_1",
+          // this which database we are trying to connect 
+          encrypt: true,
+          rowCollectionOnRequestCompletion: true,
+        },
+      };
+
+      // Load SQL Server plugin
+      const tasks = sqlServer.loadDBPlugin(config.db);
+      on("task", tasks);
+
+
+      
+    },
+ 
+3. import the plugin to your tests 
+
+in the e2e.js you need to supply below commands
+import sqlServer from 'cypress-sql-server';
+sqlServer.loadDBCommands();
+
+then write the test in your e2e folder 
