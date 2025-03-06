@@ -127,4 +127,5 @@ in the e2e.js you need to supply below commands
 import sqlServer from 'cypress-sql-server';
 sqlServer.loadDBCommands();
 
+
 then write the test in your e2e folder 

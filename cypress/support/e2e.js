@@ -15,4 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import sqlServer from 'cypress-sql-server';
+sqlServer.loadDBCommands();
 //import 'cypress-iframe';
+//import sqlServer from 'cypress-sql-server'
