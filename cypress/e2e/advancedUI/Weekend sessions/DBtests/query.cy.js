@@ -29,15 +29,15 @@ describe('Database Query Tests', () => {
 
       });
 
-      cy.sqlServer("select Name from [dbo].[Category] where Name='Mango'").then((result) => {
+      cy.sqlServer("select Name from [dbo].[Category] where Name='Automation'").then((result) => {
         expect(result).to.not.be.empty; // Adjust assertions as needed
         // Perform more assertions on result
         console.log(result)
-        expect(result).to.be.lengthOf(5)
+        expect(result).to.be.lengthOf(10)
         console.log(result[0])
         console.log(result[1])
         //expect(result[0]).to.eq(33)
-        expect(result).to.eq('Mango')
+        expect(result).to.eq('Automation')
         cy.writeFile('cypress/fixtures/queryresult2.json',result)
 
 
@@ -67,6 +67,18 @@ console.log(result)
 
 })
 
-
+it.only("customer table ",function(){
+  cy.sqlServer('select * from [dbo].[Customer]').then(function(result){
+    console.log(result)
+    //expect(result).to.not.be.empty; // Adjust assertions as needed
+            // Perform more assertions on result
+            expect(result).to.be.lengthOf(7)
+            console.log(result[0][1])
+           
+            cy.writeFile('cypress/fixtures/customerresults.json',result)
+    
+    
+})
+})
   });
   

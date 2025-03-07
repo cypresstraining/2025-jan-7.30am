@@ -1,0 +1,211 @@
+Good morning !
+
+Recap : 
+
+We understand how to setup DB testing with cypress.
+
+cypress-SQLserver we do the needful things 
+cy.task() 
+
+a. installed the plugin
+b. configure theplugin with db details 
+c. import theplugin in e2e.js
+loadthe DB configuration 
+ 
+d. Write the test
+=>
+
+API testing : 
+
+a. crud operation
+
+we do have end point 
+
+which provides results in the Json format 
+
+example.json => 
+{
+name="yourname",
+Psssowrd="password"
+
+
+}
+
+Request and response : 
+
+end point 
+
+https://example.cypress.io 
+
+but it doesnot carry any UI 
+
+HTML data 
+
+
+One application need to speak with the other application 
+
+first application may be developed on python 
+second application may be developed on dotnet 
+
+if these two languages need to speak each other then we need to take the help of api 
+
+Request => URL/URL =>end points
+request  => 
+ask a question  
+
+route  => landed on one place 
+
+result 
+Json format  => response 
+get the answer 
+
+
+Request : 
+
+CRUD => create , retrieve, Update and delete 
+get => retrieve the data 
+select 
+post  => submit the data 
+insert 
+put => update the data 
+update
+delete => delete the data 
+delete 
+Response :
+
+response data and status code 
+
+outcome 
+
+1XX
+2XX
+3XX
+4XX
+5XX 
+
+postman is a tool to do the manual api testing 
+now we are replacing this postman with cypress 
+cy.request()to handle these apis 
+
+
+successful result : for any api request
+
+{
+  "id": "pay_G3P9vcIhRs3NV4",
+  "entity": "payment",
+  "amount": 1000,
+  "currency": "INR",
+  "status": "captured",
+  "order_id": "order_GjCr5oKh4AVC51",
+  "invoice_id": null,
+  "international": false,
+  "method": "card",
+  "amount_refunded": 0,
+  "refund_status": null,
+  "captured": true,
+  "description": "Payment for Adidas shoes",
+  "card_id": "card_KOdY30ajbuyOYN",
+  "bank": null,
+  "wallet": null,
+  "vpa": null,
+  "email": "gaurav.kumar@example.com",
+  "contact": "9000090000",
+  "customer_id": "cust_K6fNE0WJZWGqtN",
+  "token_id": "token_KOdY$DBYQOv08n",
+  "notes": [],
+  "fee": 1,
+  "tax": 0,
+  "error_code": null,
+  "error_description": null,
+  "error_source": null,
+  "error_step": null,
+  "error_reason": null,
+  "acquirer_data": {
+    "authentication_reference_number": "100222021120200000000742753928"
+  },
+  "created_at": 1605871409
+}
+
+failure response:
+{
+    "error": {
+        "code": "BAD_REQUEST_ERROR",
+        "description": "The amount must be an integer.",
+        "source": "business",
+        "step": "payment_initiation",
+        "reason": "input_validation_failed",
+        "metadata": {},
+        "field": "amount"
+    }
+}
+
+ 
+
+success message for create payment link api 
+{
+  "accept_partial": true,
+  "amount": 1000,
+  "amount_paid": 0,
+  "callback_method": "get",
+  "callback_url": "https://example-callback-url.com/",
+  "cancelled_at": 0,
+  "created_at": 1591097057,
+  "currency": "INR",
+  "customer": {
+    "contact": "+919000090000",
+    "email": "gaurav.kumar@example.com",
+    "name": "Gaurav Kumar"
+  },
+  "description": "Payment for policy no #23456",
+  "expire_by": 1691097057,
+  "expired_at": 0,
+  "first_min_partial_amount": 100,
+  "id": "plink_ExjpAUN3gVHrPJ",
+  "notes": {
+    "policy_name": "Jeevan Bima"
+  },
+  "notify": {
+    "email": true,
+    "sms": true
+  },
+  "payments": null,
+  "reference_id": "TS1989",
+  "reminder_enable": true,
+  "reminders": [],
+  "short_url": "https://rzp.io/i/nxrHnLJ",
+  "status": "created",
+  "updated_at": 1591097057,
+  "user_id": ""
+}
+
+
+{
+  "error": {
+    "code": "BAD_REQUEST_ERROR",
+    "description": "The api key provided is invalid",
+    "source": "NA",
+    "step": "NA",
+    "reason": "NA",
+    "metadata": {}
+  }
+}
+
+create data  => 
+retrieve data
+update data 
+delete data 
+
+
+status code:
+
+HTTPS Status Codes
+HTTP response status codes indicate whether a specific HTTP request is successfully completed. Responses are grouped into five classes:
+
+Informational responses (100–199)
+Successful responses (200–299)
+Redirection messages (300–399)
+Client error responses (400–499)
+Server error responses (500–599)
+
+for more information have a look at :
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
