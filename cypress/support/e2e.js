@@ -17,5 +17,9 @@
 import './commands'
 import sqlServer from 'cypress-sql-server';
 sqlServer.loadDBCommands();
+
 //import 'cypress-iframe';
 //import sqlServer from 'cypress-sql-server'
+
+import '@testing-library/cypress/add-commands';
+//realHover is used to test tooltips
