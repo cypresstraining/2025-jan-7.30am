@@ -1,0 +1,49 @@
+POM => 
+1. loginpage.js 
+
+all your selectors in the form of methods 
+
+class loginPage{
+getUsername(email){
+cy.get('#email').type(email)
+}
+}
+
+export defaults loginPage
+
+
+
+2. loginPageTest.cy.js 
+import loginPage from ../../loginPage.js 
+const neatCSV=require('neat-csv') 
+
+const table;
+
+describe('load the data from csv',function(){
+const loginPage=new loginPage()
+beforeEach(()=>{
+cy.fixture('example.csv').then(neat-CSV).then()
+loginPage.getUserName(this.data[i].columnname)
+
+
+})
+
+it('',function(){
+
+
+
+
+})
+})
+
+
+
+
+
+
+
+
+
+
+
+

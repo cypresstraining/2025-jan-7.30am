@@ -25,11 +25,14 @@ describe('API Test suite', () => {
             expect(response.body.email).to.eq('Shanna@melissa.tv')
             expect(response.body.name).to.eq("Ervin Howell")
             expect(response.body.website).to.eq("anastasia.net")
+            expect(response.body.phone).to.eq("010-692-6593 x09125")
+
             expect(response.body.address.city).to.eq("Wisokyburgh")
+
           })
 
     })
-    it.only('multiple users automation in api',function() {
+    it('multiple users automation in api',function() {
     cy.request({
       url: `https://jsonplaceholder.typicode.com/users/11` ,
       method:'GET',
@@ -46,10 +49,14 @@ describe('API Test suite', () => {
      
 
   it('Retrieve the users list through loop and get method', () => {
-        for(let i=1; i<=10; i++){
+    for(let i=1; i<=15; i++)
+      {
+          if(i<=10)
+            {
             cy.log("i value:",i)
 cy.request('GET', `https://jsonplaceholder.typicode.com/users/${i}`)
-          .then((response) => {
+          .then((response) => 
+              {
             cy.log("current user ID in the response",response.body.id)
             expect(response.status).to.eq(200); // Assert status code
             expect(response.body.id).to.eq(i); // Assert user ID
@@ -58,11 +65,23 @@ cy.request('GET', `https://jsonplaceholder.typicode.com/users/${i}`)
             
           })
         }
+        else
+{
+  cy.request({
+    url: `https://jsonplaceholder.typicode.com/users/${i}` ,
+    method:'GET',
+    failOnStatusCode:false
+  }).then((response) => {
+            cy.log("current user ID in the response",response.body.id)
+            expect(response.status).to.eq(404); // Assert status code
+                 })
         /*cy.request('GET', `https://jsonplaceholder.typicode.com/users/11`,{failOnStatusCode:false})
           .then((response) => {
 
             expect(response.status).to.eq(404)
           })*/
+}
+      }
 
       })
     
@@ -110,7 +129,7 @@ cy.request('GET', `https://jsonplaceholder.typicode.com/users/${i}`)
         method: 'GET',
         failOnStatusCode: false // We expect a 404 error
       }).then((response) => {
-        expect(response.status).to.eq(200); // user is not found with status code 404
+        expect(response.status).to.eq(200); // user is  found with status code 200
       })
       
       cy.request('DELETE', `https://jsonplaceholder.typicode.com/users/10`)
@@ -118,7 +137,7 @@ cy.request('GET', `https://jsonplaceholder.typicode.com/users/${i}`)
           expect(response.status).to.eq(200); // Assert status code
         })
   
-      // Verify the user is deleted
+      // Verify the user is deleted or not
       cy.request({
         url: `https://jsonplaceholder.typicode.com/users/10}`,
         method: 'GET',
@@ -129,7 +148,7 @@ cy.request('GET', `https://jsonplaceholder.typicode.com/users/${i}`)
     })
   
   
-    it.only('put',()=>{
+    it('put',()=>{
 
       const newUser2 = {
         name: 'updated Name',
@@ -143,12 +162,16 @@ cy.request('GET', `https://jsonplaceholder.typicode.com/users/${i}`)
          expect(response.body).to.include(newUser2); // Assert response body
        userId = response.body.id; // Save user ID for later tests
        cy.log("newly added user ID",userId)
+       cy.log(response.body.name)
+       expect(response.body.name).to.eq('updated Name')
        cy.writeFile('cypress/fixtures/newUser2.json', response.body);
+
+        })
  cy.request('https://jsonplaceholder.typicode.com/users/10').then((response)=>{
   
   cy.log(response.body.name)
   //expect(response.body.name).to.eq('updated Name')
- })
+ 
         })
 
 
