@@ -2,8 +2,6 @@
 
     "devDependencies": {
 
-        "@testing-library/cypress": "^10.0.3",
-
         "cypress": "^13.17.0",
 
         "cypress-iframe": "^1.0.1",
@@ -17,6 +15,14 @@
     "dependencies": {
 
         "neat-csv": "^5.2.0"
+
+    },
+
+    "cypress-cucumber-preprocessor": {
+
+        "nonGlobalStepDefinitions": false,
+
+        "step_definitions": "cypress/e2e/cucumber/stepDefinitions/*"
 
     }
 

@@ -1,0 +1,142 @@
+how to integrate cypress with POM => 
+
+1. created a class file with different selectors belongs to that page 
+
+2. export the class 
+
+3. create a test spec  => cy.js file 
+
+4. import the class - page selectors we need to use with the help  of the import 
+5. create an object 
+6. retrieve all the selectors whenever it is required with the help of object 
+7. this provided extra security - easy readability 
+easily maintainable 
+
+adding custom keywords => 
+predefine own keyword which we can reuse - 
+
+support  >> commnds.js 
+
+Data driven frame work 
+
+we need to get the test data from external sources
+
+.json 
+.csv  => neat-csv plugin 
+
+fixtures => read file /write file +  cy.fixture() 
+
+========================================================
+
+Now in addition to the above activities we need to implement BDD frame work - 
+
+cucumber  -
+
+=> Business people  => feature files 
+.feature 
+
+Feature  One line sentence about your feature 
+scenario what condition  you are suppose to develop or test 
+Given to describe the pre requisites to be complete before your action 
+
+When   actual action to be performed 
+
+Then expected outcome 
+
+AND more conditions or actions to be performed added with AND 
+but additional condition 
+
+
+nopcommerce Login 
+
+nopcommerceLogin.feature 
+cypress >> e2e >> cucumber >> features
+nopcommerceLogin.feature 
+
+Feature  Login feature 
+Scenario Customer login with valid credentials 
+
+Given customer must be on Login screen 
+When  Customer enter correct username 
+AND customer enter correct password 
+AND customer click on Login 
+Then Login should be successful and customer is able to see Logout 
+
+Now second part of your job . Create step definitions to the above feature file . 
+=> cypress >> e2e >> cucumber >>step_definitons
+another folder with name of the feature file 
+
+nopcommerceLogin => folder Name 
+=> JavaScript file to create the step definition with same 
+nopcommerceLogin_stepDefinitons.js 
+
+import {Given , when , Then } from cypress-cucumber-preprocessor/steps  
+
+Import  className from cypress/e2e/cucumber/pages/pagename.js 
+
+Given('customer must be on Login screen',function(){
+
+cy.visit('https://nopcommerce.com')
+cy.contains('SignIn').click()
+
+})
+When('Customer enter correct username',function(){
+cy.get('#Email').clear().type('admin@yourstore.com')
+
+})
+When('Customer enter correct Password',function(){
+
+cy.get('#password').clear().type('adminadmin')
+
+})
+
+When('click on Login button',function(){
+
+cy.get('.submitbutton').click()
+
+})
+ 
+Then('Login should be successful and customer is able to see Logout 
+',function(){
+
+cy.contains('Logout').should('be.visible')
+cy.contians('Logout').click()
+cy.url().should('eq','https://nopcomerce')
+
+})
+
+
+1. setup your cypress.config.js file 
+
+const cucumber =require('cypress-cucumber-preprocessor') 
+
+
+2. setup the your package.json file 
+
+
+=> install the cypress -cucumber-preprocessor  
+npm install --save-dev cypress-cucumber-preprocessor 
+=> configure your cypress.config.js file 
+
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+ navigate to setupnodeevvent sections and paste the below information 
+ on('file:preprocessor', cucumber())
+
+we need to let cypress know which files it needs to consider 
+specPattern 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

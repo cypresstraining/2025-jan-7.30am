@@ -1,6 +1,6 @@
 const { defineConfig } = require("cypress");
 const sqlServer = require('cypress-sql-server');
-
+const cucumber = require('cypress-cucumber-preprocessor').default
 module.exports = defineConfig({
   projectId: "yo9zrb",//this will provide the flexibility to the cypress app to connect with cloud 
 
@@ -13,6 +13,8 @@ experimentalOriginDependencies:true,
     experimentalRunAllSpecs:true,
     baseUrl:'https://jsonplaceholder.typicode.com/',
     responseTimeout:60000,
+    specPattern: "cypress/e2e/cucumber/feature/*.feature",
+    //"**/*.feature"
     //testIsolation:false,
     //trashAssetsBeforeRuns:false,
     //screenshotsFolder:"Ram/Screenshots",
@@ -25,6 +27,7 @@ experimentalOriginDependencies:true,
     *///{ openMode: null, runMode: 2 }
     //includeShadowDom:true,
     setupNodeEvents(on, config) {
+      on('file:preprocessor', cucumber())
       // implement node event listeners here
       // Database configuration
       config.db = {
@@ -41,6 +44,7 @@ experimentalOriginDependencies:true,
           encrypt: true,
           rowCollectionOnRequestCompletion: true,
         },
+        
       };
 
       // Load SQL Server plugin
