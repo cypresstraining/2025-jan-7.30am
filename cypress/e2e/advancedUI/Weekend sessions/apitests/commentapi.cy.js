@@ -22,4 +22,13 @@ cy.get('@comments')//make a request to the server and yielded subject taken into
   expect(response.duration).to.lessThan(1000)
 })
     })
+
+    it("post method",function(){
+        cy.request('POST', 'http://localhost:8888/users/admin', { name: 'Jane' }).then(
+  (response) => {
+    // response.body is automatically serialized into JSON
+    expect(response.body).to.have.property('name', 'Jane') // true
+  }
+)
+    })
 })

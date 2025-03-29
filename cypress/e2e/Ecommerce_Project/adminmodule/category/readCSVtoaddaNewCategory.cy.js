@@ -1,5 +1,6 @@
 ///<reference types="cypress"/>
 import neatCsv from 'neat-csv';
+import neatCsv from 'neat-csv';
 // importing the neatCsv capabilities into your test  
 
 describe('Ecommerce new customer registration',()=>{

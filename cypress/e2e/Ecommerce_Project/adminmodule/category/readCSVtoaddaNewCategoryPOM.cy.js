@@ -1,8 +1,12 @@
 ///<reference types="cypress"/>
 import neatCsv from 'neat-csv';
+import neatCsv from 'neat-csv';
 // importing the neatCsv capabilities into your test  
+import createCategory from '../../Pages/adminPages/catalog/createCategory';
 
 describe('Ecommerce new customer registration',()=>{
+const createCategory1=new createCategory()
+
     beforeEach(()=>{//before every it block it will execute
         cy.visit('http://ramanasoft123-001-site1.anytempurl.com/admin',{
             auth: {
@@ -20,6 +24,12 @@ describe('Ecommerce new customer registration',()=>{
         })
         
        
+    })
+
+    it('create catetgory  through csv file',function(){
+       // cy.login(this.csvData[0].email,this.csvData[0].password)//complete login process
+        createCategory1.login(this.csvData[0].email,this.csvData[0].password)
+        createCategory1.createCategory(this.csvData[0].category)
     })
     it('Create a new category with Login custom keyword ',function(){
         console.log(this.csvData)

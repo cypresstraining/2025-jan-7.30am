@@ -1,6 +1,6 @@
 
 ///<reference types="cypress" />
-
+impo
 describe('Ecommerce new customer registration',()=>{
     beforeEach(()=>{//before every it block it will execute
         cy.visit('http://ramanasoft123-001-site1.anytempurl.com/admin',{

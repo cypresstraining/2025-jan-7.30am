@@ -1,0 +1,148 @@
+1. BDD 
+2. Resume preparation 
+
+BDD => 
+1. Install the cucumber plugin 
+2. We setup  => 
+
+POM related folder structure in your project
+
+=> pages 
+
+=> Class files in it with pagename  => 
+
+class pageName {
+
+browseURL(){
+
+cy.visit('https://cypress.io')
+}
+
+}
+export defaults pageName 
+
+
+import pageName  ..from your pages/pagename.js 
+
+pageName1= new PageName()
+pageNAme1.browseURL() 
+
+BDD  => complete frame work in your project 
+
+
+Pre condition : pre requisites 
+Given => pre condition that condition should be declared as Given 
+at Given condition your test will start  
+User must browse the URL 
+click on sign in link 
+customer should be on signin page 
+
+Actions in cypress => Test steps  => When => At what condition we need to test 
+What is actual condition we would like to test 
+
+enter username 
+enter password 
+click on sign 
+ 
+expected result Assertion in cypress
+Then => Login should be successful 
+
+folder => 
+
+cucumber 
+=> pages => 
+class {}
+export 
+
+feature files 
+
+Given 
+when 
+then 
+
+=> steps_definition => 
+
+=> Tests 
+Import statement 
+object creation using the object.mehtods
+
+
+1. Create a folder with the name cucumber in the e2e folder 
+2. subfolders -3 
+a.feature => all feature file it contains in this folder 
+all your BDD frame work related text file => 
+Feature : Login feature 
+category creation 
+subcategory creation 
+
+Scenario : one line statement about your test 
+Login with valid credentials 
+Login with invalid credetils 
+Neworder creation from admin 
+delete order from admin 
+
+Given  abc
+When   def
+Then  xyz
+
+example.feature
+conduitLogin.feature
+ecommerLogin.feature
+lmsLogin.feature 
+
+b.stepDefinitons
+  1.  subfolder with feature file Name 
+  example => folder name 
+  ecommerLogin => foldername 
+  2. in the subfolder you need to create  - 
+js file with same name featurefilename_stepDef.js 
+
+3. stepDefinntions file 
+import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
+import pageName from your pages/pagename
+
+const object1=new PageName()
+Given('abc',()=> {
+direct test code => 
+object1.browseURL()
+
+})
+When('def',()=>{
+object1.enterUserName()
+object1.enterPassword()
+object1.Login()
+
+})
+Then('xyz',()=>{
+object.verifyLogin()
+})
+
+3. Configuration in your repo 
+cypress.configuraiton file 
+
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+a.     specPattern: "cypress/e2e/cucumber/feature/*.feature",
+b.   on('file:preprocessor', cucumber())
+
+
+   4. Package.json 
+=====================================================
+
+Reports we can take the help of allure-reports 
+free open source html reports 
+
+1. install the allureports plugin in your project
+npm install --save-dev allure-cypress
+2. modify cypress.config.js 
+import { allureCypress } from "allure-cypress/reporter";
+
+
+1. cucumber -  repository=> 
+https://github.com/cypresstraining/Cypress-Cucumber
+2. Allure-report-
+reference document:
+https://allurereport
+.org/docs/cypress/
+
+https://github.com/cypresstraining/cypress-allurereports

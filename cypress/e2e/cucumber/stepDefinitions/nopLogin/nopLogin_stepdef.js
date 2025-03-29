@@ -1,11 +1,7 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
-
-//loading the step definitons in the current test 
-import nopLoginPage from "../../Pages/nopcommerceLogin"
-//importing the nopLoginPage class file 
-
+import nopLoginPage from '../../Pages/nopLoginPage'
 beforeEach(function(){
-    cy.fixture('nopLogin').as('data') //aliasing the data exist in the json file as 'this.data.adminEmail'
+    cy.fixture('nopLoginData').as('data') //aliasing the data exist in the json file as 'this.data.adminEmail'
 })
 const nopLoginPage1 =new nopLoginPage() //object creation
 Given('User is on the nopcommerce login page', function () {

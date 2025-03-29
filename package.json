@@ -2,7 +2,11 @@
 
     "devDependencies": {
 
+        "allure-cypress": "^3.2.1",
+
         "cypress": "^13.17.0",
+
+        "cypress-cucumber-preprocessor": "^4.3.1",
 
         "cypress-iframe": "^1.0.1",
 
@@ -20,7 +24,7 @@
 
     "cypress-cucumber-preprocessor": {
 
-        "nonGlobalStepDefinitions": false,
+        "nonGlobalStepdefinitions": false,
 
         "step_definitions": "cypress/e2e/cucumber/stepDefinitions/*"
 

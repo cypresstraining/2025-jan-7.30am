@@ -11,6 +11,8 @@
 //
 // -- This is a parent command --
 //import 'cypress-iframe';
+//require('cypress-iframe');
+
 Cypress.Commands.add('login', (email, password) => { 
     cy.get('.ico-login').click();
     cy.get('h1').should('have.text', 'Welcome, Please Sign In!');

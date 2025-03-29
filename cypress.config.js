@@ -1,6 +1,9 @@
+
 const { defineConfig } = require("cypress");
 const sqlServer = require('cypress-sql-server');
 const cucumber = require('cypress-cucumber-preprocessor').default
+import { allureCypress } from "allure-cypress/reporter";
+
 module.exports = defineConfig({
   projectId: "yo9zrb",//this will provide the flexibility to the cypress app to connect with cloud 
 
@@ -28,6 +31,10 @@ experimentalOriginDependencies:true,
     //includeShadowDom:true,
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
+      allureCypress(on, config, {
+        resultsDir: "allure-results",
+      });
+      return config;
       // implement node event listeners here
       // Database configuration
       config.db = {
